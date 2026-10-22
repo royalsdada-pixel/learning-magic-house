@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#17152f">
+<title>公園國小五年級・學習魔法小屋</title>
+<style>
+:root{--bg:#111127;--panel:#201f43;--panel2:#292752;--gold:#ffd166;--mint:#76e6c4;--pink:#ff8ab3;--text:#f7f4ff;--muted:#c0bddf;--line:#484574}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#30275b 0,#17152f 52%,#101020 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC",sans-serif;min-height:100vh}
+button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:12px 15px;font-weight:800;color:#191632;background:var(--gold);transition:.15s}button:active{transform:scale(.98)}button:disabled{opacity:.4;cursor:not-allowed}.secondary{background:#393663;color:var(--text);border:1px solid var(--line)}.mint{background:var(--mint)}.pink{background:var(--pink)}
+.wrap{max-width:980px;margin:auto;padding:16px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.brand{display:flex;gap:12px;align-items:center}.logo{width:50px;height:50px;border-radius:16px;background:linear-gradient(135deg,#ffd166,#ff8ab3);display:grid;place-items:center;font-size:27px;box-shadow:0 6px 22px #0005}.eyebrow{color:var(--mint);font-size:11px;letter-spacing:2px;font-weight:900}.brand h1{font-size:19px;margin:3px 0}.stats{display:flex;gap:8px;flex-wrap:wrap}.pill{background:#252348;border:1px solid var(--line);padding:8px 11px;border-radius:99px;font-size:13px;font-weight:800;white-space:nowrap}
+.hero{border:1px solid #65599c;background:linear-gradient(120deg,#30285b,#222147 70%,#1c2949);border-radius:24px;padding:20px;position:relative;overflow:hidden;margin-bottom:16px}.hero:after{content:"✦";position:absolute;right:25px;top:10px;color:#ffd16688;font-size:80px}.hero h2{margin:0 0 7px;font-size:24px}.hero p{color:var(--muted);margin:0;max-width:610px;line-height:1.6}.heroRow{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}.avatar{font-size:57px;filter:drop-shadow(0 6px 10px #0005);min-width:70px;text-align:center}.levelbar{height:8px;background:#15142d;border-radius:99px;overflow:hidden;margin-top:12px;max-width:400px}.levelbar span{display:block;height:100%;background:linear-gradient(90deg,var(--mint),#a9f7f1);width:0%;transition:.3s}
+.sectionTitle{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:23px 0 12px}.sectionTitle h2{font-size:18px;margin:0}.sectionTitle small{color:var(--muted)}
+.subjects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.subject{border:1px solid var(--line);border-radius:20px;padding:15px;background:linear-gradient(145deg,#29264f,#1d1c3d);text-align:left;color:var(--text);min-height:155px;display:flex;flex-direction:column;gap:8px}.subject .emoji{font-size:30px}.subject strong{font-size:16px}.subject small{color:var(--muted);line-height:1.4}.progress{height:5px;border-radius:99px;background:#111127;overflow:hidden;margin-top:auto}.progress span{display:block;height:100%;background:var(--mint)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.card{border:1px solid var(--line);border-radius:20px;background:#201f43;padding:16px}.card h3{margin:0 0 10px}.muted{color:var(--muted);font-size:13px;line-height:1.55}.task{display:flex;gap:12px;align-items:center;margin:10px 0}.taskIcon{width:45px;height:45px;border-radius:14px;background:#393663;display:grid;place-items:center;font-size:23px;flex-shrink:0}.taskText{flex:1}.taskText b{display:block}.taskText small{color:var(--muted)}
+.bottomnav{position:sticky;bottom:8px;margin:18px auto 0;background:#191832ee;backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;padding:7px;display:flex;gap:6px;z-index:4;max-width:600px;box-shadow:0 8px 30px #0005}.bottomnav button{flex:1;background:transparent;color:var(--muted);padding:11px 5px;font-size:12px}.bottomnav button.active{background:#393663;color:var(--gold)}
+.screen{display:none}.screen.active{display:block}
+.back{margin-bottom:14px}.battleHead{display:flex;align-items:center;justify-content:space-between;gap:10px}.monster{font-size:76px;text-align:center;margin:10px}.bossbox{text-align:center;background:linear-gradient(160deg,#352452,#201d42);border:1px solid #72539a;border-radius:22px;padding:18px;margin-bottom:14px}.hp{height:10px;background:#111127;border-radius:99px;overflow:hidden;margin:8px auto;max-width:400px}.hp span{display:block;background:linear-gradient(90deg,#ff6487,#ffb36b);height:100%;width:100%;transition:.3s}.question{font-size:18px;line-height:1.7;margin:18px 0}.options{display:grid;gap:9px}.opt{background:#292750;color:var(--text);text-align:left;border:1px solid #484574;display:flex;gap:10px;align-items:center}.opt .letter{width:28px;height:28px;display:grid;place-items:center;border-radius:9px;background:#3b3868;flex-shrink:0}.opt.selected{border-color:var(--gold);background:#39345c}.opt.correct{border-color:var(--mint);background:#1d514d}.opt.wrong{border-color:var(--pink);background:#542b4a}.feedback{padding:13px;border-radius:14px;margin-top:12px;line-height:1.6;background:#302d58}.shopGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.item{background:#252348;border:1px solid var(--line);border-radius:18px;padding:14px}.itemIcon{font-size:37px}.item h3{font-size:15px;margin:7px 0}.item button{width:100%;margin-top:10px}.owned{color:var(--mint);font-weight:900;font-size:13px}
+.badge{display:inline-block;border:1px solid #615b91;color:var(--gold);border-radius:99px;padding:4px 8px;font-size:11px;font-weight:900}.notice{padding:12px;border:1px dashed #655d95;border-radius:14px;color:var(--muted);font-size:12px;line-height:1.6;margin-top:14px}.field{width:100%;background:#171630;color:white;border:1px solid var(--line);padding:12px;border-radius:12px;font:inherit}
+@media(max-width:650px){.wrap{padding:12px}.top{align-items:flex-start;flex-direction:column}.brand h1{font-size:17px}.hero h2{font-size:21px}.subjects{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.subject{padding:12px;min-height:150px}.grid2{grid-template-columns:1fr}.shopGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pill{font-size:12px}.stats{width:100%}.sectionTitle{margin-top:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div class="brand"><div class="logo">🏰</div><div><div class="eyebrow">PARK ELEMENTARY · KNOWLEDGE ADVENTURE</div><h1>公園國小五年級・學習魔法小屋</h1></div></div>
+ <div class="stats"><div class="pill">⭐ <span id="xpTop">0</span> XP</div><div class="pill">🪙 <span id="coinsTop">0</span> 點</div><div class="pill">🔥 連勝 <span id="streakTop">0</span></div></div>
+</header>
+
+<main id="home" class="screen active">
+ <section class="hero"><div class="heroRow"><div style="flex:1"><div class="eyebrow">你的冒險，現在開始</div><h2>知識就是最強魔法！</h2><p>挑選學科、迎戰怪物、累積經驗值，收集只屬於你的冒險者造型。答錯也沒關係，理解答案就是下一次的力量。</p><div class="levelbar"><span id="xpBar"></span></div><small class="muted" id="levelText">Lv.1 冒險新手 · 0 / 100 XP</small></div><div class="avatar" id="heroAvatar">🧙🏻‍♂️</div></div></section>
+ <div class="sectionTitle"><h2>🗺️ 六大知識領域</h2><small>選擇一座領域開始挑戰</small></div>
+ <section class="subjects" id="subjects"></section>
+ <div class="sectionTitle"><h2>📜 今日冒險任務</h2><small>一步一步累積成長</small></div>
+ <section class="grid2">
+  <div class="card"><div class="task"><div class="taskIcon">⚔️</div><div class="taskText"><b>擊敗 3 隻怪物</b><small id="dailyKills">已完成 0 / 3</small></div></div><div class="progress"><span id="dailyBar" style="width:0%"></span></div></div>
+  <div class="card"><div class="task"><div class="taskIcon">📚</div><div class="taskText"><b>挑戰兩個不同學科</b><small id="dailySubjects">已探索 0 / 2 個領域</small></div></div><div class="progress"><span id="dailySubBar" style="width:0%"></span></div></div>
+ </section>
+ <div class="notice">📌 原型說明：目前內建的是玩法示範題，不代表任何特定出版社的正式課本內容。確認各科實際出版社與單元後，即可持續擴充正式題庫。遊戲進度會儲存在這台裝置的瀏覽器中。</div>
+</main>
+
+<main id="battle" class="screen">
+ <button class="secondary back" onclick="go('home')">← 回到魔法小屋</button>
+ <div class="bossbox"><div class="battleHead"><span class="badge" id="battleSubject">國語領域</span><span class="badge" id="battleCount">第 1 題</span></div><div class="monster" id="monster">🟢</div><h2 id="monsterName">迷糊史萊姆</h2><div class="muted" id="monsterDesc">普通怪物 · 知識試煉</div><div class="hp"><span id="monsterHp"></span></div><small class="muted" id="hpText">怪物 HP：1 / 1</small></div>
+ <section class="card"><div class="eyebrow" id="unitName">新手試煉</div><div class="question" id="questionText"></div><div class="options" id="options"></div><div id="feedback"></div><div style="display:flex;gap:9px;margin-top:14px"><button class="secondary" style="flex:1" onclick="hint()">💡 提示</button><button id="answerBtn" style="flex:2" onclick="submitAnswer()" disabled>施展知識攻擊</button></div></section>
+</main>
+
+<main id="shop" class="screen">
+ <div class="sectionTitle"><h2>🛍️ 冒險者裝備商店</h2><span class="pill">🪙 <span id="shopCoins">0</span> 點</span></div>
+ <p class="muted">用完成任務獲得的點數，解鎖帽子、披風、武器與寵物。裝備只改變外觀，不會讓學習能力有高低之分。</p>
+ <div class="shopGrid" id="shopItems"></div>
+</main>
+
+<main id="character" class="screen">
+ <div class="sectionTitle"><h2>🧙 角色與收藏</h2><span class="badge">你的專屬冒險者</span></div>
+ <div class="card" style="text-align:center;padding:24px"><div id="bigAvatar" style="font-size:86px">🧙🏻‍♂️</div><h2 id="charTitle">見習冒險者</h2><p class="muted" id="charSummary">每一次學習，都讓你更接近傳說。</p><div class="stats" style="justify-content:center"><div class="pill">⭐ Lv.<span id="charLevel">1</span></div><div class="pill">📖 已答 <span id="answered">0</span> 題</div><div class="pill">🏆 擊敗 <span id="kills">0</span> 隻</div></div></div>
+ <div class="sectionTitle"><h2>🎨 角色外觀</h2></div><div class="card"><p class="muted">選擇已解鎖的角色造型。</p><div id="avatarChoices" style="display:flex;gap:10px;flex-wrap:wrap"></div></div>
+ <div class="sectionTitle"><h2>🏅 冒險成就</h2></div><div class="card" id="achievements"></div>
+</main>
+
+<main id="progress" class="screen">
+ <div class="sectionTitle"><h2>📈 冒險紀錄</h2><span class="badge">單人模式</span></div>
+ <div class="grid2"><div class="card"><div class="muted">累積經驗值</div><h2><span id="progressXP">0</span> XP</h2></div><div class="card"><div class="muted">累積知識點</div><h2><span id="progressCoins">0</span> 點</h2></div></div>
+ <div class="sectionTitle"><h2>各領域進度</h2></div><div class="card" id="progressSubjects"></div>
+ <div class="sectionTitle"><h2>🧠 最近的學習紀錄</h2></div><div class="card" id="history"></div>
+ <div class="notice">進度存在目前裝置的瀏覽器。清除瀏覽器網站資料或換裝置，可能會讓本機紀錄消失。正式版可再加入帳號同步與家長檢視功能。</div>
+ <button class="secondary" style="margin-top:14px" onclick="exportSave()">匯出我的冒險存檔</button>
+ <button class="secondary" style="margin-top:14px" onclick="resetGame()">重設遊戲（會清除本機進度）</button>
+</main>
+
+<nav class="bottomnav">
+ <button class="active" data-screen="home" onclick="go('home')">🏰<br>小屋</button>
+ <button data-screen="shop" onclick="go('shop')">🛍️<br>商店</button>
+ <button data-screen="character" onclick="go('character')">🧙<br>角色</button>
+ <button data-screen="progress" onclick="go('progress')">📈<br>紀錄</button>
+</nav>
+</div>
+<script>
+const subjects=[
+ {id:'chinese',name:'國語',emoji:'📜',color:'#f4b860',desc:'字詞、成語、閱讀理解',boss:'錯字幽靈',monster:'📚',unit:'文字聖殿',questions:[
+  {q:'「一絲不苟」最適合形容哪一種態度？',a:['做事非常認真，不馬虎','做事速度非常快','遇到困難就放棄','喜歡和別人爭吵'],c:0,why:'「一絲不苟」形容做事十分認真，連最細微的地方也不隨便。',hint:'想想「不苟」有不隨便的意思。'},
+  {q:'下列哪一句使用了「擬人」的修辭？',a:['月亮像一艘小船','風兒輕輕唱著歌','天空是藍色的','他跑得像箭一樣快'],c:1,why:'把風寫成會唱歌的人，賦予自然現象人的動作，是擬人。',hint:'擬人是把事物寫得像人一樣。'},
+  {q:'閱讀時遇到不懂的詞語，哪個方法最適合先試試？',a:['直接跳過整篇文章','只看詞語的第一個字','根據前後文推測意思','猜一個答案就不再確認'],c:2,why:'利用上下文線索推測詞義，是重要的閱讀策略。',hint:'文章前後的句子常會提供線索。'},
+  {q:'「守株待兔」主要提醒我們什麼？',a:['要多種樹木','不能只靠僥倖而不努力','兔子跑得很快','每天都要等待別人'],c:1,why:'這個成語比喻不主動努力，卻妄想再次得到意外收穫。',hint:'農夫一直等兔子撞樹，卻不再耕作。'}]},
+ {id:'english',name:'英文',emoji:'🔮',desc:'單字、句型、生活會話',boss:'遺忘之龍',monster:'🐉',unit:'咒語學院',questions:[
+  {q:'Choose the correct sentence.（選出正確的句子）',a:['She are my friend.','She is my friend.','She am my friend.','She be my friend.'],c:1,why:'主詞 She 是第三人稱單數，be 動詞使用 is。',hint:'She 搭配哪一個 be 動詞？'},
+  {q:'「圖書館」的英文是什麼？',a:['hospital','restaurant','library','station'],c:2,why:'library 是圖書館；hospital 是醫院。',hint:'這個字以 lib 開頭。'},
+  {q:'選出正確的問句：你喜歡蘋果嗎？',a:['Do you like apples?','Are you like apples?','Does you like apples?','You do like apples?'],c:0,why:'一般現在式詢問 you 的喜好，可用 Do you like...? ',hint:'主詞 you 的助動詞用 Do。'},
+  {q:'What time is it? It is 7:30. 代表幾點？',a:['七點整','七點半','八點半','六點半'],c:1,why:'7:30 是 seven thirty，也就是七點半。',hint:'30 分鐘是半小時。'}]},
+ {id:'math',name:'數學',emoji:'🧮',desc:'計算、推理、生活應用',boss:'分數巨像',monster:'🗿',unit:'秘數迷宮',questions:[
+  {q:'一條緞帶長 3/4 公尺，用掉 1/4 公尺，還剩多少公尺？',a:['1/4 公尺','1/2 公尺','2/4 公尺','1 公尺'],c:1,why:'分母相同，分子相減：3/4 − 1/4 = 2/4 = 1/2 公尺。',hint:'分母相同時，分子相減。'},
+  {q:'計算：125 × 8 = ？',a:['800','900','1000','1200'],c:2,why:'125 × 8 = 1000。可以把 125 看成 1000 ÷ 8。',hint:'125 × 4 = 500，再乘 2。'},
+  {q:'長方形長 9 公分、寬 4 公分，面積是多少？',a:['13 平方公分','26 平方公分','36 平方公分','18 平方公分'],c:2,why:'長方形面積＝長 × 寬＝9 × 4＝36 平方公分。',hint:'面積要用長乘以寬。'},
+  {q:'一盒有 24 顆糖，平均分給 6 個人，每人幾顆？',a:['3 顆','4 顆','5 顆','6 顆'],c:1,why:'24 ÷ 6 = 4，每人分到 4 顆。',hint:'平均分配使用除法。'}]},
+ {id:'science',name:'自然',emoji:'🧪',desc:'觀察、實驗、自然現象',boss:'混沌元素獸',monster:'🦎',unit:'元素研究院',questions:[
+  {q:'進行科學實驗時，為了公平比較，通常應該怎麼做？',a:['一次改變很多條件','只記錄想看到的結果','控制其他條件，只改變要測試的因素','不需要記錄數據'],c:2,why:'公平實驗通常一次改變一個主要因素，並控制其他條件。',hint:'想想怎麼確定結果是由哪個因素造成的。'},
+  {q:'使用放大鏡觀察物品時，哪個做法比較安全？',a:['用放大鏡看太陽','用放大鏡聚光燒紙','不把放大鏡對準太陽或眼睛','把放大鏡放在火邊'],c:2,why:'放大鏡可能聚集陽光造成灼傷或起火，不能對準太陽或眼睛。',hint:'放大鏡可以聚集光線。'},
+  {q:'植物通常透過哪個部位吸收土壤中的水分？',a:['花瓣','根','果實','種子外殼'],c:1,why:'植物的根能吸收土壤中的水分和礦物質。',hint:'這個部位通常長在土壤裡。'},
+  {q:'觀察結果與原本猜想不同時，最好的做法是？',a:['修改紀錄讓它符合猜想','誠實記錄並重新檢查原因','停止所有實驗','說實驗一定失敗'],c:1,why:'科學重視誠實紀錄證據，並根據結果重新思考。',hint:'科學結論要依據證據。'}]},
+ {id:'social',name:'社會',emoji:'🗺️',desc:'臺灣、地圖、歷史與生活',boss:'迷途領主',monster:'🧭',unit:'文明疆域',questions:[
+  {q:'地圖上的圖例主要有什麼用途？',a:['裝飾地圖','說明符號代表的意思','表示天氣一定晴朗','代替地圖標題'],c:1,why:'圖例用來解釋地圖上的符號、線條或顏色代表什麼。',hint:'看不懂地圖符號時，應該先看哪裡？'},
+  {q:'在臺灣，若要知道某地位於另一地的哪個方向，可以使用什麼？',a:['方向標示與地圖','溫度計','體重計','放大鏡'],c:0,why:'方向標示搭配地圖，可以協助判斷相對位置。',hint:'通常會標示北、南、東、西。'},
+  {q:'社區居民一起討論公共空間如何使用，最重要的是什麼？',a:['只有聲音最大的人決定','尊重不同意見並共同討論','完全不讓別人發言','每個人只顧自己'],c:1,why:'公共事務需要溝通、尊重不同意見，並尋找合適的共識。',hint:'公共空間和大家都有關。'},
+  {q:'認識地方歷史時，哪一項最可能是有用的資料？',a:['地方文史紀錄與老照片','隨機猜測','沒有來源的傳聞','只看現在的天氣'],c:0,why:'文史紀錄、老照片、訪談等資料可以幫助了解地方變遷。',hint:'尋找能提供過去線索的資料。'}]},
+ {id:'health',name:'健康',emoji:'❤️',desc:'安全、情緒、健康生活',boss:'幻惑夢魘',monster:'👾',unit:'生命守護殿',questions:[
+  {q:'感到生氣時，哪個方法有助於先穩定情緒？',a:['立刻推人','深呼吸並暫停一下','大聲辱罵對方','把東西摔壞'],c:1,why:'先停下來、緩慢呼吸，再表達感受，有助於避免衝動行為。',hint:'先讓身體和情緒慢下來。'},
+  {q:'運動時如果出現胸痛、暈眩或呼吸異常，應該怎麼做？',a:['硬撐到結束','加快速度','立即停止並告知成人或尋求協助','假裝沒事'],c:2,why:'出現明顯不適應立即停止活動，並尋求成人或醫療協助。',hint:'身體發出警訊時，不要勉強。'},
+  {q:'網路上收到陌生人要求個人住址與密碼，應該怎麼做？',a:['立刻全部提供','公開貼到社群','不要提供，並告知可信任的大人','請對方再問一次'],c:2,why:'住址、密碼等個人資訊要妥善保護，遇到可疑要求應找可信任的大人。',hint:'保護個人資料是網路安全的一部分。'},
+  {q:'維持健康的生活習慣，哪一項比較適合？',a:['長期熬夜','均衡飲食、規律活動與充足睡眠','只吃一種食物','整天不喝水'],c:1,why:'均衡飲食、適量運動、足夠睡眠和水分都有助於健康。',hint:'健康需要多方面的日常照顧。'}]}
+];
+const shop=[
+ {id:'hat',icon:'🎩',name:'星光魔法帽',cost:30,desc:'帽沿閃著小小星光',avatar:'🧙🏻‍♂️'},
+ {id:'sword',icon:'🗡️',name:'勇者木劍',cost:50,desc:'新手冒險者的可靠夥伴',avatar:'🧝🏻'},
+ {id:'cape',icon:'🦸',name:'星雲披風',cost:80,desc:'走過之處留下微光',avatar:'🦸🏻'},
+ {id:'cat',icon:'🐈‍⬛',name:'魔法黑貓',cost:100,desc:'神祕又忠誠的旅伴',avatar:'🧙🏻'},
+ {id:'crown',icon:'👑',name:'知識王冠',cost:160,desc:'獻給持續努力的冒險者',avatar:'🤴🏻'},
+ {id:'wings',icon:'🪽',name:'星辰飛翼',cost:220,desc:'向更遠的知識世界出發',avatar:'🧚🏻'}
+];
+const defaults={xp:0,coins:0,streak:0,answered:0,kills:0,correct:0,bySubject:{},visited:[],owned:[],avatar:'🧙🏻‍♂️',history:[],dailyKills:0,dailyDate:new Date().toDateString()};
+let state;try{state={...defaults,...JSON.parse(localStorage.getItem('parkMagicSave')||'{}')};}catch(e){state={...defaults}}
+if(state.dailyDate!==new Date().toDateString()){state.dailyDate=new Date().toDateString();state.dailyKills=0;state.dailySubjects=[]}
+let currentSubject=null,currentQuestion=null,selected=-1,answeredThis=false,monsterHP=1;
+const $=id=>document.getElementById(id);
+function save(){localStorage.setItem('parkMagicSave',JSON.stringify(state));renderAll()}
+function level(){return Math.floor(state.xp/100)+1}
+function xpInto(){return state.xp%100}
+function go(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id).classList.add('active');document.querySelectorAll('.bottomnav button').forEach(b=>b.classList.toggle('active',b.dataset.screen===id));renderAll();window.scrollTo({top:0,behavior:'smooth'})}
+function renderSubjects(){$('subjects').innerHTML=subjects.map(s=>{let p=state.bySubject[s.id]||{answered:0,correct:0,kills:0};let pct=p.answered?Math.round(p.correct/p.answered*100):0;return `<button class="subject" onclick="startBattle('${s.id}')"><span class="emoji">${s.emoji}</span><strong>${s.name}領域</strong><small>${s.desc}</small><div class="progress"><span style="width:${Math.min(100,p.kills*25)}%"></span></div><small>擊敗 ${p.kills||0} 隻怪物 · 答對率 ${pct}%</small></button>`}).join('')}
+function renderShop(){$('shopItems').innerHTML=shop.map(i=>{let own=state.owned.includes(i.id);return `<div class="item"><div class="itemIcon">${i.icon}</div><h3>${i.name}</h3><div class="muted">${i.desc}</div><p>🪙 ${i.cost} 點</p>${own?'<div class="owned">✓ 已解鎖</div><button class="secondary" onclick="equip(\''+i.id+'\')">穿戴造型</button>':`<button ${state.coins<i.cost?'disabled':''} onclick="buy('${i.id}')">解鎖外觀</button>`}</div>`}).join('')}
+function renderCharacter(){$('bigAvatar').textContent=state.avatar;$('heroAvatar').textContent=state.avatar;$('charLevel').textContent=level();$('answered').textContent=state.answered;$('kills').textContent=state.kills;$('charTitle').textContent=level()>=10?'傳說知識勇者':level()>=5?'進階探索者':'見習冒險者';$('charSummary').textContent=`已累積 ${state.xp} XP，讓你的知識魔力持續成長。`;$('avatarChoices').innerHTML=['🧙🏻‍♂️','🧝🏻','🦸🏻','🧙🏻','🤴🏻','🧚🏻'].map(a=>`<button class="${state.avatar===a?'':'secondary'}" style="font-size:27px;padding:12px" onclick="setAvatar('${a}')">${a}</button>`).join('');$('achievements').innerHTML=[['🌱','初次啟程','完成第一題',state.answered>=1],['⚔️','初戰告捷','擊敗第一隻怪物',state.kills>=1],['📚','勤學冒險者','累積答題 10 題',state.answered>=10],['🔥','連擊新星','連續答對 3 題',state.streak>=3],['🛍️','收藏家','解鎖第一件外觀',state.owned.length>=1],['🌈','六域探索','六個學科都挑戰過',state.visited.length>=6]].map(a=>`<div class="task"><div class="taskIcon">${a[0]}</div><div class="taskText"><b>${a[1]} ${a[3]?'✓':''}</b><small>${a[2]}</small></div><span class="badge">${a[3]?'已達成':'未解鎖'}</span></div>`).join('')}
+function renderProgress(){$('progressXP').textContent=state.xp;$('progressCoins').textContent=state.coins;$('progressSubjects').innerHTML=subjects.map(s=>{let p=state.bySubject[s.id]||{answered:0,correct:0,kills:0};let pct=p.answered?Math.round(p.correct/p.answered*100):0;return `<div style="margin:12px 0"><div style="display:flex;justify-content:space-between;gap:8px"><b>${s.emoji} ${s.name}</b><small class="muted">${p.answered} 題 · 答對率 ${pct}% · 擊敗 ${p.kills} 隻</small></div><div class="progress" style="margin-top:7px"><span style="width:${pct}%"></span></div></div>`}).join('');$('history').innerHTML=state.history.length?state.history.slice(0,8).map(h=>`<div class="task"><div class="taskIcon">${h.ok?'✨':'📘'}</div><div class="taskText"><b>${h.subject} · ${h.ok?'答對':'再接再厲'}</b><small>${h.question}</small></div><span class="badge">${h.ok?'+10 XP':'複習'}</span></div>`).join(''):'<p class="muted">還沒有冒險紀錄。選一個學科，開始你的第一場戰鬥吧！</p>'}
+function renderAll(){ $('xpTop').textContent=state.xp;$('coinsTop').textContent=state.coins;$('streakTop').textContent=state.streak;$('shopCoins').textContent=state.coins;$('xpBar').style.width=xpInto()+'%';$('levelText').textContent=`Lv.${level()} ${level()>=10?'傳說知識勇者':level()>=5?'進階探索者':'冒險新手'} · ${xpInto()} / 100 XP`;$('dailyKills').textContent=`已完成 ${Math.min(3,state.dailyKills)} / 3`;$('dailyBar').style.width=Math.min(100,state.dailyKills/3*100)+'%';let ds=state.dailySubjects||[];$('dailySubjects').textContent=`已探索 ${Math.min(2,ds.length)} / 2 個領域`;$('dailySubBar').style.width=Math.min(100,ds.length/2*100)+'%';renderSubjects();renderShop();renderCharacter();renderProgress()}
+function startBattle(id){currentSubject=subjects.find(s=>s.id===id);if(!state.visited.includes(id))state.visited.push(id);if(!state.dailySubjects)state.dailySubjects=[];if(!state.dailySubjects.includes(id))state.dailySubjects.push(id);let p=state.bySubject[id]||{answered:0,correct:0,kills:0,index:0};let idx=(p.index||0)%currentSubject.questions.length;currentQuestion=currentSubject.questions[idx];p.index=idx+1;state.bySubject[id]=p;selected=-1;answeredThis=false;monsterHP=1;go('battle');renderQuestion()}
+function renderQuestion(){$('battleSubject').textContent=currentSubject.name+'領域';let p=state.bySubject[currentSubject.id];$('battleCount').textContent=`挑戰 ${p.answered+1} · ${p.index} / ${currentSubject.questions.length}`;$('monster').textContent=p.kills%3===2?currentSubject.monster:['🟢','👻','🐾'][p.kills%3];$('monsterName').textContent=p.kills%3===2?currentSubject.boss:['迷糊小怪','知識守門員','調皮魔物'][p.kills%3];$('monsterDesc').textContent=p.kills%3===2?'菁英魔王 · 單元試煉':'普通怪物 · 知識試煉';$('monsterHp').style.width='100%';$('hpText').textContent='怪物 HP：1 / 1';$('unitName').textContent=currentSubject.unit+' · '+(p.kills%3===2?'魔王挑戰':'冒險任務');$('questionText').textContent=currentQuestion.q;$('options').innerHTML=currentQuestion.a.map((a,i)=>`<button class="opt" id="opt${i}" onclick="choose(${i})"><span class="letter">${'ABCD'[i]}</span><span>${a}</span></button>`).join('');$('feedback').innerHTML='';$('answerBtn').disabled=true;$('answerBtn').textContent='施展知識攻擊'}
+function choose(i){if(answeredThis)return;selected=i;currentQuestion.a.forEach((_,j)=>$('opt'+j).classList.toggle('selected',i===j));$('answerBtn').disabled=false}
+function hint(){if(answeredThis)return;$('feedback').innerHTML=`<div class="feedback">💡 <b>魔法提示：</b>${currentQuestion.hint}</div>`}
+function submitAnswer(){if(selected<0||answeredThis)return;answeredThis=true;let ok=selected===currentQuestion.c;let p=state.bySubject[currentSubject.id];state.answered++;p.answered++;if(ok){state.xp+=10;state.coins+=10;state.correct++;p.correct++;state.streak++;state.kills++;p.kills++;state.dailyKills++;monsterHP=0;$('monsterHp').style.width='0%';$('hpText').textContent='怪物 HP：0 / 1';$('monster').textContent='💥';$('feedback').innerHTML=`<div class="feedback" style="border:1px solid #4eaf9b">🎉 <b>知識攻擊成功！怪物被擊敗！</b><br>獲得 ⭐ +10 XP、🪙 +10 點<br><br><b>知識解析：</b>${currentQuestion.why}</div>`;$('answerBtn').textContent='下一場戰鬥';$('answerBtn').disabled=false;$('answerBtn').onclick=nextQuestion}else{state.streak=0;$('opt'+selected).classList.add('wrong');$('opt'+currentQuestion.c).classList.add('correct');$('feedback').innerHTML=`<div class="feedback" style="border:1px solid #b66c9b">🛡️ <b>這次沒有命中，不扣除點數！</b><br><b>正確答案：</b>${currentQuestion.a[currentQuestion.c]}<br><br><b>知識解析：</b>${currentQuestion.why}</div>`;$('answerBtn').textContent='理解了，再試下一題';$('answerBtn').disabled=false;$('answerBtn').onclick=nextQuestion}
+state.history.unshift({subject:currentSubject.name,ok,question:currentQuestion.q});state.history=state.history.slice(0,30);save()}
+function nextQuestion(){ $('answerBtn').onclick=submitAnswer;startBattle(currentSubject.id)}
+function buy(id){let i=shop.find(x=>x.id===id);if(!i||state.owned.includes(id)||state.coins<i.cost)return;state.coins-=i.cost;state.owned.push(id);state.avatar=i.avatar;save()}
+function equip(id){let i=shop.find(x=>x.id===id);if(i&&state.owned.includes(id)){state.avatar=i.avatar;save()}}
+function setAvatar(a){state.avatar=a;save()}
+function exportSave(){let blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='公園國小學習魔法小屋存檔.json';a.click();URL.revokeObjectURL(a.href)}
+function resetGame(){if(confirm('確定重設？這會清除目前瀏覽器儲存的遊戲進度。')){localStorage.removeItem('parkMagicSave');state={...defaults,bySubject:{},visited:[],owned:[],history:[]};save();go('home')}}
+renderAll();
+</script>
+</body></html>
