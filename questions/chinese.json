@@ -1,0 +1,45 @@
+{
+  "subject": "國語",
+  "publisher": "南一",
+  "grade": 5,
+  "term": "上學期",
+  "scope": {
+    "lessons": [
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6"
+    ]
+  },
+  "questions": [],
+  "status": "needs_textbook_verification",
+  "lesson_titles": [
+    {
+      "lesson": "L1",
+      "title": "幸福筆記本"
+    },
+    {
+      "lesson": "L2",
+      "title": "做人做事做長久"
+    },
+    {
+      "lesson": "L3",
+      "title": "孔雀錯了"
+    },
+    {
+      "lesson": "L4",
+      "title": "特別的海"
+    },
+    {
+      "lesson": "L5",
+      "title": "漫遊花東"
+    },
+    {
+      "lesson": "L6",
+      "title": "護送螃蟹過馬路"
+    }
+  ],
+  "note": "使用者已確認出版社與課名；因尚未取得課文正文或語詞表，暫不臆造課文細節題。"
+}
