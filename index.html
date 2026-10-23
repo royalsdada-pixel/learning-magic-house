@@ -31,6 +31,7 @@ button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:12px 15px
  <section class="hero"><div class="heroRow"><div style="flex:1"><div class="eyebrow">你的冒險，現在開始</div><h2>知識就是最強魔法！</h2><p>挑選學科、迎戰怪物、累積經驗值，收集只屬於你的冒險者造型。答錯也沒關係，理解答案就是下一次的力量。</p><div class="levelbar"><span id="xpBar"></span></div><small class="muted" id="levelText">Lv.1 冒險新手 · 0 / 100 XP</small></div><div class="avatar" id="heroAvatar">🧙🏻‍♂️</div></div></section>
  <div class="sectionTitle"><h2>🗺️ 六大知識領域</h2><small>選擇一座領域開始挑戰</small></div>
  <section class="subjects" id="subjects"></section>
+ <p class="muted" id="questionBankStatus" aria-live="polite">正在讀取外部題庫……</p>
  <div class="sectionTitle"><h2>📜 今日冒險任務</h2><small>一步一步累積成長</small></div>
  <section class="grid2">
   <div class="card"><div class="task"><div class="taskIcon">⚔️</div><div class="taskText"><b>擊敗 3 隻怪物</b><small id="dailyKills">已完成 0 / 3</small></div></div><div class="progress"><span id="dailyBar" style="width:0%"></span></div></div>
@@ -108,6 +109,57 @@ const subjects=[
   {q:'網路上收到陌生人要求個人住址與密碼，應該怎麼做？',a:['立刻全部提供','公開貼到社群','不要提供，並告知可信任的大人','請對方再問一次'],c:2,why:'住址、密碼等個人資訊要妥善保護，遇到可疑要求應找可信任的大人。',hint:'保護個人資料是網路安全的一部分。'},
   {q:'維持健康的生活習慣，哪一項比較適合？',a:['長期熬夜','均衡飲食、規律活動與充足睡眠','只吃一種食物','整天不喝水'],c:1,why:'均衡飲食、適量運動、足夠睡眠和水分都有助於健康。',hint:'健康需要多方面的日常照顧。'}]}
 ];
+// 從 GitHub Pages 的 questions/ 資料夾載入外部題庫。
+// 題庫格式：每科 JSON 的 questions 陣列，選項答案索引 answer_index 從 0 開始。
+const demoQuestions = Object.fromEntries(subjects.map(s => [s.id, s.questions.slice()]));
+const questionBankFiles = {
+  chinese: 'chinese.json',
+  english: 'english.json',
+  math: 'math.json',
+  science: 'science.json',
+  social: 'social.json',
+  health: 'health.json'
+};
+async function loadQuestionBanks() {
+  const status = document.getElementById('questionBankStatus');
+  let loadedCount = 0;
+  for (const s of subjects) {
+    try {
+      const response = await fetch('./questions/' + questionBankFiles[s.id], { cache: 'no-store' });
+      if (!response.ok) continue;
+      const data = await response.json();
+      if (!Array.isArray(data.questions) || data.questions.length === 0) continue;
+      const imported = data.questions
+        .filter(q => q && q.question && Array.isArray(q.options) &&
+          Number.isInteger(q.answer_index) && q.answer_index >= 0 &&
+          q.answer_index < q.options.length)
+        .map(q => ({
+          q: q.question,
+          a: q.options,
+          c: q.answer_index,
+          why: q.explanation || '再讀一次題目，想想各選項的差異。',
+          hint: q.topic ? '本題主題：' + q.topic + '。先仔細讀題，再排除不合理的選項。' : '先找出題目中的關鍵字，再逐一檢查選項。',
+          bankId: q.id || '',
+          lesson: q.lesson || ''
+        }));
+      if (imported.length) {
+        // 外部題庫優先，原本的四題示範題保留在後面，避免空題庫時遊戲不能玩。
+        s.questions = imported.concat(demoQuestions[s.id]);
+        if (data.subject) s.bankLabel = `${data.publisher || ''} ${data.subject}`.trim();
+        loadedCount += imported.length;
+      }
+    } catch (err) {
+      // JSON 尚未上傳、路徑錯誤或網路暫時失敗時，保留原本示範題。
+      console.warn('題庫載入失敗：' + s.id, err);
+    }
+  }
+  if (status) {
+    status.textContent = loadedCount
+      ? `✨ 已載入外部題庫 ${loadedCount} 題；各科題目會優先出題。`
+      : '目前使用內建示範題。若已上傳 JSON，請確認檔案位於網站根目錄的 questions 資料夾。';
+  }
+  renderAll();
+}
 const shop=[
  {id:'hat',icon:'🎩',name:'星光魔法帽',cost:30,desc:'帽沿閃著小小星光',avatar:'🧙🏻‍♂️'},
  {id:'sword',icon:'🗡️',name:'勇者木劍',cost:50,desc:'新手冒險者的可靠夥伴',avatar:'🧝🏻'},
@@ -131,7 +183,7 @@ function renderCharacter(){$('bigAvatar').textContent=state.avatar;$('heroAvatar
 function renderProgress(){$('progressXP').textContent=state.xp;$('progressCoins').textContent=state.coins;$('progressSubjects').innerHTML=subjects.map(s=>{let p=state.bySubject[s.id]||{answered:0,correct:0,kills:0};let pct=p.answered?Math.round(p.correct/p.answered*100):0;return `<div style="margin:12px 0"><div style="display:flex;justify-content:space-between;gap:8px"><b>${s.emoji} ${s.name}</b><small class="muted">${p.answered} 題 · 答對率 ${pct}% · 擊敗 ${p.kills} 隻</small></div><div class="progress" style="margin-top:7px"><span style="width:${pct}%"></span></div></div>`}).join('');$('history').innerHTML=state.history.length?state.history.slice(0,8).map(h=>`<div class="task"><div class="taskIcon">${h.ok?'✨':'📘'}</div><div class="taskText"><b>${h.subject} · ${h.ok?'答對':'再接再厲'}</b><small>${h.question}</small></div><span class="badge">${h.ok?'+10 XP':'複習'}</span></div>`).join(''):'<p class="muted">還沒有冒險紀錄。選一個學科，開始你的第一場戰鬥吧！</p>'}
 function renderAll(){ $('xpTop').textContent=state.xp;$('coinsTop').textContent=state.coins;$('streakTop').textContent=state.streak;$('shopCoins').textContent=state.coins;$('xpBar').style.width=xpInto()+'%';$('levelText').textContent=`Lv.${level()} ${level()>=10?'傳說知識勇者':level()>=5?'進階探索者':'冒險新手'} · ${xpInto()} / 100 XP`;$('dailyKills').textContent=`已完成 ${Math.min(3,state.dailyKills)} / 3`;$('dailyBar').style.width=Math.min(100,state.dailyKills/3*100)+'%';let ds=state.dailySubjects||[];$('dailySubjects').textContent=`已探索 ${Math.min(2,ds.length)} / 2 個領域`;$('dailySubBar').style.width=Math.min(100,ds.length/2*100)+'%';renderSubjects();renderShop();renderCharacter();renderProgress()}
 function startBattle(id){currentSubject=subjects.find(s=>s.id===id);if(!state.visited.includes(id))state.visited.push(id);if(!state.dailySubjects)state.dailySubjects=[];if(!state.dailySubjects.includes(id))state.dailySubjects.push(id);let p=state.bySubject[id]||{answered:0,correct:0,kills:0,index:0};let idx=(p.index||0)%currentSubject.questions.length;currentQuestion=currentSubject.questions[idx];p.index=idx+1;state.bySubject[id]=p;selected=-1;answeredThis=false;monsterHP=1;go('battle');renderQuestion()}
-function renderQuestion(){$('battleSubject').textContent=currentSubject.name+'領域';let p=state.bySubject[currentSubject.id];$('battleCount').textContent=`挑戰 ${p.answered+1} · ${p.index} / ${currentSubject.questions.length}`;$('monster').textContent=p.kills%3===2?currentSubject.monster:['🟢','👻','🐾'][p.kills%3];$('monsterName').textContent=p.kills%3===2?currentSubject.boss:['迷糊小怪','知識守門員','調皮魔物'][p.kills%3];$('monsterDesc').textContent=p.kills%3===2?'菁英魔王 · 單元試煉':'普通怪物 · 知識試煉';$('monsterHp').style.width='100%';$('hpText').textContent='怪物 HP：1 / 1';$('unitName').textContent=currentSubject.unit+' · '+(p.kills%3===2?'魔王挑戰':'冒險任務');$('questionText').textContent=currentQuestion.q;$('options').innerHTML=currentQuestion.a.map((a,i)=>`<button class="opt" id="opt${i}" onclick="choose(${i})"><span class="letter">${'ABCD'[i]}</span><span>${a}</span></button>`).join('');$('feedback').innerHTML='';$('answerBtn').disabled=true;$('answerBtn').textContent='施展知識攻擊'}
+function renderQuestion(){$('battleSubject').textContent=currentSubject.name+'領域';let p=state.bySubject[currentSubject.id];$('battleCount').textContent=`本次第 ${p.answered+1} 題 · 題庫共 ${currentSubject.questions.length} 題`;$('monster').textContent=p.kills%3===2?currentSubject.monster:['🟢','👻','🐾'][p.kills%3];$('monsterName').textContent=p.kills%3===2?currentSubject.boss:['迷糊小怪','知識守門員','調皮魔物'][p.kills%3];$('monsterDesc').textContent=p.kills%3===2?'菁英魔王 · 單元試煉':'普通怪物 · 知識試煉';$('monsterHp').style.width='100%';$('hpText').textContent='怪物 HP：1 / 1';$('unitName').textContent=currentSubject.unit+' · '+(p.kills%3===2?'魔王挑戰':'冒險任務');$('questionText').textContent=currentQuestion.q;$('options').innerHTML=currentQuestion.a.map((a,i)=>`<button class="opt" id="opt${i}" onclick="choose(${i})"><span class="letter">${'ABCD'[i]}</span><span>${a}</span></button>`).join('');$('feedback').innerHTML='';$('answerBtn').disabled=true;$('answerBtn').textContent='施展知識攻擊'}
 function choose(i){if(answeredThis)return;selected=i;currentQuestion.a.forEach((_,j)=>$('opt'+j).classList.toggle('selected',i===j));$('answerBtn').disabled=false}
 function hint(){if(answeredThis)return;$('feedback').innerHTML=`<div class="feedback">💡 <b>魔法提示：</b>${currentQuestion.hint}</div>`}
 function submitAnswer(){if(selected<0||answeredThis)return;answeredThis=true;let ok=selected===currentQuestion.c;let p=state.bySubject[currentSubject.id];state.answered++;p.answered++;if(ok){state.xp+=10;state.coins+=10;state.correct++;p.correct++;state.streak++;state.kills++;p.kills++;state.dailyKills++;monsterHP=0;$('monsterHp').style.width='0%';$('hpText').textContent='怪物 HP：0 / 1';$('monster').textContent='💥';$('feedback').innerHTML=`<div class="feedback" style="border:1px solid #4eaf9b">🎉 <b>知識攻擊成功！怪物被擊敗！</b><br>獲得 ⭐ +10 XP、🪙 +10 點<br><br><b>知識解析：</b>${currentQuestion.why}</div>`;$('answerBtn').textContent='下一場戰鬥';$('answerBtn').disabled=false;$('answerBtn').onclick=nextQuestion}else{state.streak=0;$('opt'+selected).classList.add('wrong');$('opt'+currentQuestion.c).classList.add('correct');$('feedback').innerHTML=`<div class="feedback" style="border:1px solid #b66c9b">🛡️ <b>這次沒有命中，不扣除點數！</b><br><b>正確答案：</b>${currentQuestion.a[currentQuestion.c]}<br><br><b>知識解析：</b>${currentQuestion.why}</div>`;$('answerBtn').textContent='理解了，再試下一題';$('answerBtn').disabled=false;$('answerBtn').onclick=nextQuestion}
@@ -143,5 +195,6 @@ function setAvatar(a){state.avatar=a;save()}
 function exportSave(){let blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='公園國小學習魔法小屋存檔.json';a.click();URL.revokeObjectURL(a.href)}
 function resetGame(){if(confirm('確定重設？這會清除目前瀏覽器儲存的遊戲進度。')){localStorage.removeItem('parkMagicSave');state={...defaults,bySubject:{},visited:[],owned:[],history:[]};save();go('home')}}
 renderAll();
+loadQuestionBanks();
 </script>
 </body></html>
