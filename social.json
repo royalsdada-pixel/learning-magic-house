@@ -1,0 +1,234 @@
+{
+  "subject": "社會",
+  "publisher": "康軒",
+  "grade": 5,
+  "term": "上學期",
+  "scope": {
+    "lessons": [
+      "L1",
+      "L2"
+    ]
+  },
+  "questions": [
+    {
+      "id": "H001",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "臺灣的地理位置",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "要描述臺灣與周邊地區的相對位置，最適合使用哪一種資料？",
+      "options": [
+        "標示清楚的區域地圖",
+        "食譜",
+        "樂譜",
+        "溫度計"
+      ],
+      "answer_index": 0,
+      "explanation": "區域地圖能呈現臺灣與周邊地區的位置關係。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "H002",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "地圖判讀",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "地圖上的圖例主要有什麼用途？",
+      "options": [
+        "說明地圖符號代表的意思",
+        "測量人的身高",
+        "記錄音樂節拍",
+        "預測考試分數"
+      ],
+      "answer_index": 0,
+      "explanation": "圖例用來解釋地圖符號所代表的事物。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "H003",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "方位判讀",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "一般地圖若沒有特別標示方向，通常上方代表哪個方向？",
+      "options": [
+        "北方",
+        "南方",
+        "東方",
+        "西方"
+      ],
+      "answer_index": 0,
+      "explanation": "一般地圖通常以北方朝上，但仍應先查看地圖上的方向標示。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "H004",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "地理位置與生活",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "研究不同地區的文化與生活時，為什麼也要了解地理位置？",
+      "options": [
+        "地理位置可能影響交流與生活發展",
+        "地理位置能決定每個人的個性",
+        "地理位置會讓所有文化完全相同",
+        "地理位置與人類生活絕對無關"
+      ],
+      "answer_index": 0,
+      "explanation": "地理位置會影響交通、交流及生活發展，但文化形成也受到許多其他因素影響。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "H005",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "資料判讀",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "閱讀地圖時，若要知道地圖上某個符號代表什麼，應先查看哪裡？",
+      "options": [
+        "圖例",
+        "頁碼",
+        "封面",
+        "目錄的字體"
+      ],
+      "answer_index": 0,
+      "explanation": "圖例說明地圖符號的意義。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "H006",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "社會規範",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "社會規範主要是什麼？",
+      "options": [
+        "人們在群體生活中共同遵守的行為準則",
+        "只適用於某一個人的私人願望",
+        "自然界的天氣變化",
+        "地圖上的比例尺"
+      ],
+      "answer_index": 0,
+      "explanation": "社會規範是人們在群體生活中用來引導行為的準則。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "H007",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "社會規範的功能",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "社會規範對群體生活可能有什麼幫助？",
+      "options": [
+        "讓互動較有秩序",
+        "讓所有人想法完全相同",
+        "讓社會不再需要溝通",
+        "保證每件事都不會出錯"
+      ],
+      "answer_index": 0,
+      "explanation": "社會規範有助於維持秩序、減少衝突，但不代表所有人想法都相同。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "H008",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "生活禮儀",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "在圖書館降低音量，較符合哪一種目的？",
+      "options": [
+        "尊重其他使用者並維持公共秩序",
+        "阻止所有人閱讀",
+        "讓書籍變得更重",
+        "改變圖書館的位置"
+      ],
+      "answer_index": 0,
+      "explanation": "公共場所的行為規範有助於尊重他人及維持共同使用空間的秩序。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "H009",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "規範與情境",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "排隊買東西時依序等候，最能表現哪一種行為？",
+      "options": [
+        "遵守公共生活中的規範",
+        "任意插隊",
+        "不理會他人權益",
+        "破壞公共秩序"
+      ],
+      "answer_index": 0,
+      "explanation": "依序排隊是常見的公共生活規範，有助於公平與秩序。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "H010",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "規範與責任",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "當大家共同使用教室時，遵守約定的規則有什麼好處？",
+      "options": [
+        "讓大家更容易安全、有秩序地使用空間",
+        "讓教室一定不需要打掃",
+        "讓每個人的權利都消失",
+        "讓規則永遠不能討論"
+      ],
+      "answer_index": 0,
+      "explanation": "共同遵守合理規則有助於安全、有秩序地使用公共空間。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    }
+  ]
+}

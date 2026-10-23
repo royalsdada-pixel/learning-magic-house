@@ -1,0 +1,234 @@
+{
+  "subject": "自然",
+  "publisher": "南一",
+  "grade": 5,
+  "term": "上學期",
+  "scope": {
+    "lessons": [
+      "L1",
+      "L2"
+    ]
+  },
+  "questions": [
+    {
+      "id": "S001",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "光的直進",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "在空氣中，光通常沿著什麼路徑前進？",
+      "options": [
+        "曲線",
+        "直線",
+        "螺旋線",
+        "固定的圓形"
+      ],
+      "answer_index": 1,
+      "explanation": "在均勻介質中，光通常沿直線前進。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "S002",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "光源",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "下列哪一個是能自行發光的物體？",
+      "options": [
+        "月亮",
+        "鏡子",
+        "太陽",
+        "白紙"
+      ],
+      "answer_index": 2,
+      "explanation": "太陽能自行發光；月亮、鏡子和白紙主要是反射光。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "S003",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "影子形成",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "不透明物體擋住光線時，可能形成什麼？",
+      "options": [
+        "影子",
+        "彩虹",
+        "水蒸氣",
+        "磁力"
+      ],
+      "answer_index": 0,
+      "explanation": "不透明物體阻擋光線，會在光線較少的一側形成影子。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "S004",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "反光",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "鏡子能讓我們看見影像，主要是因為光發生什麼現象？",
+      "options": [
+        "蒸發",
+        "反射",
+        "凝固",
+        "溶解"
+      ],
+      "answer_index": 1,
+      "explanation": "鏡面會反射光線，使眼睛接收到反射光。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "S005",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "透明與不透明",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "下列哪一種材料通常最容易讓光透過並看清後方物體？",
+      "options": [
+        "透明玻璃",
+        "厚紙板",
+        "木板",
+        "金屬片"
+      ],
+      "answer_index": 0,
+      "explanation": "透明玻璃可讓大部分可見光透過，能看清後方物體。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "S006",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "影子變化",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "在常見的點光源實驗中，光源與物體位置不變，屏幕移得更遠，影子通常會如何變化？",
+      "options": [
+        "可能變大",
+        "一定變成零",
+        "一定不變",
+        "一定變成彩色"
+      ],
+      "answer_index": 0,
+      "explanation": "點光源模型下，屏幕離物體更遠時，影子通常會變大。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "S007",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "植物根",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "植物的根通常有什麼重要功能？",
+      "options": [
+        "吸收水分和礦物質",
+        "讓植物移動位置",
+        "吸收聲音",
+        "製造陽光"
+      ],
+      "answer_index": 0,
+      "explanation": "根通常能固定植物，並從土壤吸收水分和礦物質。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "S008",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "植物葉",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "植物的葉通常是進行哪一項作用的重要部位？",
+      "options": [
+        "光合作用",
+        "地震",
+        "金屬生鏽",
+        "岩石融化"
+      ],
+      "answer_index": 0,
+      "explanation": "葉通常含有葉綠體，是植物進行光合作用的重要部位。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "S009",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "植物莖",
+      "difficulty": "基礎",
+      "type": "single_choice",
+      "question": "植物的莖常見的功能之一是什麼？",
+      "options": [
+        "支撐植物並運送水分",
+        "讓植物像動物一樣走路",
+        "製造土壤",
+        "讓陽光消失"
+      ],
+      "answer_index": 0,
+      "explanation": "莖可支撐植物，並參與水分及養分的運輸。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    },
+    {
+      "id": "S010",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "植物生長條件",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "若一株植物長期得不到水，最可能出現哪種情況？",
+      "options": [
+        "更容易正常生長",
+        "可能萎凋",
+        "立即變成動物",
+        "完全不受影響"
+      ],
+      "answer_index": 1,
+      "explanation": "水是植物生長所需的重要條件，缺水可能使植物萎凋。",
+      "source_type": "original_practice",
+      "review_status": "draft"
+    }
+  ]
+}

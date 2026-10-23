@@ -1,0 +1,22 @@
+{
+  "id": "M001",
+  "subject": "數學",
+  "publisher": "康軒",
+  "grade": 5,
+  "term": "上學期",
+  "lesson": "L1",
+  "topic": "小數加法",
+  "difficulty": "基礎",
+  "type": "single_choice",
+  "question": "題目文字",
+  "options": [
+    "選項 A",
+    "選項 B",
+    "選項 C",
+    "選項 D"
+  ],
+  "answer_index": 0,
+  "explanation": "解題說明",
+  "source_type": "original_practice",
+  "review_status": "draft"
+}

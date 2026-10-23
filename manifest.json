@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "project": "公園國小五年級學習魔法小屋",
+  "term": "五年級上學期",
+  "exam_scope": {
+    "國語": {
+      "publisher": "南一",
+      "lessons": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6"
+      ],
+      "status": "課名已確認；課文細節題待依課本校對"
+    },
+    "英文": {
+      "publisher": "南一",
+      "lessons": [],
+      "status": "待提供目錄與已教進度"
+    },
+    "數學": {
+      "publisher": "康軒",
+      "lessons": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5"
+      ],
+      "status": "範圍已確認"
+    },
+    "自然": {
+      "publisher": "南一",
+      "lessons": [
+        "L1",
+        "L2"
+      ],
+      "status": "範圍已確認"
+    },
+    "社會": {
+      "publisher": "康軒",
+      "lessons": [
+        "L1",
+        "L2"
+      ],
+      "status": "範圍已確認"
+    },
+    "健康": {
+      "publisher": "翰林",
+      "lessons": [],
+      "status": "待提供目錄與已教進度"
+    }
+  },
+  "notes": [
+    "本批題目為原創練習題，非出版社官方題目。",
+    "課文細節題須依實際課本逐題校對。",
+    "answer_index 從 0 起算。",
+    "本包不修改既有 index.html。"
+  ]
+}
