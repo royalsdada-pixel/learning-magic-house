@@ -1102,7 +1102,7 @@
       "domain": "數與運算",
       "difficulty": 2,
       "type": "single_choice",
-      "question": "下列哪一個數是 18 的因數？",
+      "question": "18 顆彈珠平均分成 9 份，每份有 2 顆。下列哪個數也能整除 18？",
       "options": [
         "5",
         "7",
@@ -1110,8 +1110,8 @@
         "11"
       ],
       "answer_index": 2,
-      "explanation": "18 ÷ 9 = 2，沒有餘數，所以 9 是 18 的因數。",
-      "hint": "找一個整數除以 18 後能整除的數。",
+      "explanation": "18 ÷ 9 = 2，沒有餘數，所以 9 能整除 18，是 18 的因數。",
+      "hint": "如果一個數除以 18 沒有餘數，它就是 18 的因數。",
       "source_type": "original_practice",
       "review_status": "needs_review"
     },
