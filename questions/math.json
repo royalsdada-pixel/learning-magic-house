@@ -585,7 +585,10 @@
       "explanation": "24 × 3 = 72，所以一共有 72 枝。",
       "hint": "先算 20 × 3，再算 4 × 3，最後相加。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-002",
@@ -609,7 +612,10 @@
       "explanation": "53 ÷ 6 = 8 餘 5，因此最多裝滿 8 袋。",
       "hint": "比較 6 × 8 和 6 × 9。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-003",
@@ -633,7 +639,10 @@
       "explanation": "先算乘法：4 × 5 = 20，再算 18 + 20 = 38。",
       "hint": "先圈出乘法，再完成加法。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-004",
@@ -657,7 +666,10 @@
       "explanation": "先算括號：18 + 4 = 22，再算 22 × 5 = 110。",
       "hint": "括號裡的部分先完成。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-005",
@@ -681,7 +693,10 @@
       "explanation": "把分數換成小數或通分比較：3/4 = 0.75，大於其餘選項。",
       "hint": "可以把分數想成同樣大小的一個整體。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "分數大小比較，需依第4單元實際教學內容確認"
     },
     {
       "id": "math-g5-core-006",
@@ -705,7 +720,10 @@
       "explanation": "分母相同，分子相加：2/7 + 3/7 = 5/7。",
       "hint": "同分母分數相加時，分母保持不變。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-007",
@@ -729,7 +747,10 @@
       "explanation": "還剩 8 − 3 = 5 片，所以剩下 5/8。",
       "hint": "先算剩下幾片，再用剩餘片數作分子。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "分數與整體的關係，作為分數概念補強"
     },
     {
       "id": "math-g5-core-008",
@@ -753,7 +774,10 @@
       "explanation": "3 位於十分位，代表 3 個十分之一，也就是 0.3。",
       "hint": "從小數點右邊第一位開始是十分位。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "unit1_candidate",
+      "curriculum_note": "小數位值，可支援多位小數概念；需對照課本範圍"
     },
     {
       "id": "math-g5-core-009",
@@ -777,7 +801,10 @@
       "explanation": "將小數點對齊：2.45 + 1.30 = 3.75。",
       "hint": "把 1.3 寫成 1.30 再相加。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "unit1_candidate",
+      "curriculum_note": "小數加法，對應多位小數與加減；目前數值位數較簡單"
     },
     {
       "id": "math-g5-core-010",
@@ -801,7 +828,10 @@
       "explanation": "1.25 × 4 = 5，所以共有 5 公升。",
       "hint": "先算 125 × 4，再依原數的小數位數放回小數點。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-011",
@@ -825,7 +855,10 @@
       "explanation": "1 公尺 = 100 公分，所以 2 公尺 35 公分 = 200 + 35 = 235 公分。",
       "hint": "先把 2 公尺換成 200 公分，再加上 35 公分。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-012",
@@ -849,7 +882,10 @@
       "explanation": "1 公斤 = 1000 公克，因此 3 公斤 = 3000 公克。",
       "hint": "記住 1 公斤等於 1000 公克。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-013",
@@ -873,7 +909,10 @@
       "explanation": "2:35 加 1 小時是 3:35，再加 40 分鐘是 4:15。",
       "hint": "先加小時，再加分鐘，注意 60 分鐘等於 1 小時。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-014",
@@ -897,7 +936,10 @@
       "explanation": "六邊形的名稱表示它有 6 條邊。",
       "hint": "沿著圖形外框逐邊數一次，不要重複。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "unit5_candidate",
+      "curriculum_note": "多邊形邊數辨識，對應多邊形入門"
     },
     {
       "id": "math-g5-core-015",
@@ -921,7 +963,10 @@
       "explanation": "從一個頂點分割凸 n 邊形，可分成 n − 2 個三角形；五邊形是 5 − 2 = 3 個。",
       "hint": "先畫一個五邊形，再從同一頂點向內分割。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "unit5_review_required",
+      "curriculum_note": "多邊形分割規律較抽象，須確認是否符合課本要求"
     },
     {
       "id": "math-g5-core-016",
@@ -945,7 +990,10 @@
       "explanation": "周長是四邊總長：9 + 4 + 9 + 4 = 26 公分，也可算 (9 + 4) × 2。",
       "hint": "長方形有兩條長和兩條寬。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-017",
@@ -969,7 +1017,10 @@
       "explanation": "長方形面積 = 長 × 寬 = 8 × 5 = 40 平方公尺。",
       "hint": "想像每排 8 個單位方格，共有 5 排。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-018",
@@ -993,7 +1044,10 @@
       "explanation": "周長相同不代表長和寬的組合相同，因此面積不一定相同。例如 1×5 與 2×4 的周長都是 12，面積卻不同。",
       "hint": "比較長寬不同但四邊總長相同的例子。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-019",
@@ -1017,7 +1071,10 @@
       "explanation": "每次增加 4，因此下一個數是 18 + 4 = 22。",
       "hint": "計算 10−6、14−10、18−14。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-020",
@@ -1041,7 +1098,10 @@
       "explanation": "每排增加 3 顆，第四排是 10 + 3 = 13 顆。",
       "hint": "從第三排的 10 顆再增加 3 顆。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-021",
@@ -1065,7 +1125,10 @@
       "explanation": "15 本最多，因此星期三借閱最多。",
       "hint": "比較 12、9、15 三個數。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-022",
@@ -1089,7 +1152,10 @@
       "explanation": "12 + 9 + 15 = 36 本。",
       "hint": "先把前兩天相加，再加第三天。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-023",
@@ -1113,7 +1179,10 @@
       "explanation": "18 ÷ 9 = 2，沒有餘數，所以分成 9 袋可行，每袋 2 顆。",
       "hint": "用 18 除以選項中的袋數，看看是否有餘數。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "unit2_candidate",
+      "curriculum_note": "因數概念，對應因數與公因數"
     },
     {
       "id": "math-g5-core-024",
@@ -1137,7 +1206,10 @@
       "explanation": "7 × 4 = 28，因此 28 是 7 的倍數。",
       "hint": "檢查選項能否寫成 7 乘以整數。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "unit3_candidate",
+      "curriculum_note": "倍數概念，對應倍數與公倍數"
     },
     {
       "id": "math-g5-core-025",
@@ -1161,7 +1233,10 @@
       "explanation": "48 元接近 50 元，5 盒約 50 × 5 = 250 元。",
       "hint": "先用 50 乘以 5 估計。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-026",
@@ -1185,7 +1260,10 @@
       "explanation": "先算 24 × 3 = 72，再算 72 − 17 = 55 枝。",
       "hint": "先求總數，再扣掉送出的數量。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-027",
@@ -1209,7 +1287,10 @@
       "explanation": "1 公升 = 1000 毫升，所以 2 公升 = 2000 毫升。",
       "hint": "1 公升可以分成 1000 個 1 毫升。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-028",
@@ -1233,7 +1314,10 @@
       "explanation": "角的大小由兩邊張開的程度決定，不由邊的長短決定。",
       "hint": "想像把同一個角的兩邊延長。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "角的概念補強，非已確認期中五單元核心題型"
     },
     {
       "id": "math-g5-core-029",
@@ -1257,7 +1341,10 @@
       "explanation": "36 ÷ 4 = 9，每人分到 9 張。",
       "hint": "確認四個人拿到的數量相同。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     },
     {
       "id": "math-g5-core-030",
@@ -1281,7 +1368,10 @@
       "explanation": "每排增加 2：第四排 14 個，第五排 16 個。也可從第一排往後增加四次，共 8 + 4×2 = 16。",
       "hint": "從第一排到第五排，中間要增加四次。",
       "source_type": "original_practice",
-      "review_status": "ai_content_checked_needs_curriculum_review"
+      "review_status": "ai_content_checked_needs_textbook_verification",
+      "curriculum_basis": "康軒五上第一次期中考範圍（依使用者先前確認的單元名稱）",
+      "curriculum_alignment": "supplemental",
+      "curriculum_note": "跨版本基礎能力補充題，不列為已確認期中範圍核心題"
     }
   ]
 }
