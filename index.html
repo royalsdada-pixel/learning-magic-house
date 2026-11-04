@@ -195,16 +195,38 @@ function renderProgress(){renderMathAnalytics();$('progressXP').textContent=stat
 function renderAll(){ $('wrongCount').textContent=(state.wrongQuestions||[]).length;renderMathUnits();$('xpTop').textContent=state.xp;$('coinsTop').textContent=state.coins;$('streakTop').textContent=state.streak;$('shopCoins').textContent=state.coins;$('xpBar').style.width=xpInto()+'%';$('levelText').textContent=`Lv.${level()} ${level()>=10?'傳說知識勇者':level()>=5?'進階探索者':'冒險新手'} · ${xpInto()} / 100 XP`;$('dailyKills').textContent=`已完成 ${Math.min(3,state.dailyKills)} / 3`;$('dailyBar').style.width=Math.min(100,state.dailyKills/3*100)+'%';let ds=state.dailySubjects||[];$('dailySubjects').textContent=`已探索 ${Math.min(2,ds.length)} / 2 個領域`;$('dailySubBar').style.width=Math.min(100,ds.length/2*100)+'%';renderSubjects();renderShop();renderCharacter();renderProgress()}
 function renderMathAnalytics(){
  const box=$('mathAnalytics');if(!box)return;
- const math=subjects.find(s=>s.id==='math');
  const units=[['L1','多位小數與加減'],['L2','因數與公因數'],['L3','倍數與公倍數'],['L4','擴分約分和通分'],['L5','多邊形與扇形']];
  if(!state.unitStats)state.unitStats={};
- box.innerHTML=units.map(([lesson,label])=>{
+ const rows=units.map(([lesson,label])=>{
   const stat=state.unitStats[lesson]||{answered:0,correct:0};
   const wrong=(state.wrongQuestions||[]).filter(q=>q.subjectId==='math'&&q.lesson===lesson).length;
   const pct=stat.answered?Math.round(stat.correct/stat.answered*100):0;
-  const status=stat.answered===0?'尚未練習':pct<60?'需要加強':pct<80?'持續練習':'表現穩定';
-  return `<div style="margin:12px 0"><div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><b>${lesson} · ${label}</b><small class="muted">${status}</small></div><div class="progress" style="margin-top:7px"><span style="width:${pct}%"></span></div><small class="muted">${stat.answered} 次作答 · 答對率 ${pct}% · 錯題本 ${wrong} 題</small></div>`;
- }).join('');
+  const status=stat.answered===0?'尚未練習':stat.answered<5?'累積作答中':pct<60?'需要加強':pct<80?'持續練習':'表現穩定';
+  return {lesson,label,stat,wrong,pct,status};
+ });
+ const total=rows.reduce((n,r)=>n+r.stat.answered,0);
+ const correct=rows.reduce((n,r)=>n+r.stat.correct,0);
+ const overall=total?Math.round(correct/total*100):0;
+ const attempted=rows.filter(r=>r.stat.answered>0);
+ const recommendation=attempted.length?[...attempted].sort((a,b)=>(a.pct-b.pct)||(b.wrong-a.wrong))[0]:rows[0];
+ const recommendationText=!total
+  ?'先選一個單元開始練習，系統就會逐步建立學習紀錄。'
+  :recommendation.stat.answered<5
+   ?'這個單元的作答樣本還少，建議再練幾題後觀察。'
+   :recommendation.pct<80
+    ?'建議優先練習這個單元，再回來比較答對率有沒有進步。'
+    :'目前已練單元的表現穩定，可以挑戰期中考混合題。';
+ box.innerHTML=`<div class="grid2" style="margin-bottom:14px">
+  <div class="card"><div class="muted">數學累積作答</div><h2>${total} 題</h2></div>
+  <div class="card"><div class="muted">數學整體答對率</div><h2>${overall}%</h2></div>
+ </div>
+ <div class="task" style="margin-bottom:14px"><div class="taskIcon">🧭</div><div class="taskText"><b>建議下一步：${recommendation.lesson} · ${recommendation.label}</b><small>${recommendationText}</small></div><button class="secondary" onclick="startUnitPractice('${recommendation.lesson}')">去練習</button></div>
+ ${rows.map(r=>`<div style="margin:14px 0;padding-bottom:12px;border-bottom:1px solid var(--line)">
+  <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><b>${r.lesson} · ${r.label}</b><small class="muted">${r.status}</small></div>
+  <div class="progress" style="margin-top:7px"><span style="width:${r.pct}%"></span></div>
+  <small class="muted">${r.stat.answered} 次作答 · 答對率 ${r.pct}% · 錯題本 ${r.wrong} 題</small>
+  <button class="secondary" style="margin-top:8px;padding:7px 10px" onclick="startUnitPractice('${r.lesson}')">練習這個單元</button>
+ </div>`).join('')}`;
 }
 function renderMathUnits(){
  const box=$('mathUnits');if(!box)return;
