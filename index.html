@@ -27,16 +27,16 @@ button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:12px 15px
 <body>
 <div class="wrap">
 <header class="top">
- <div class="brand"><div class="logo">🏰</div><div><div class="eyebrow">PARK ELEMENTARY · KNOWLEDGE ADVENTURE</div><h1>公園國小五年級・學習魔法小屋</h1></div></div>
- <div class="stats"><div class="pill">⭐ <span id="xpTop">0</span> XP</div><div class="pill">🪙 <span id="coinsTop">0</span> 點</div><div class="pill">🔥 連勝 <span id="streakTop">0</span></div></div>
+ <div class="brand"><div class="logo">🏰</div><div><div class="eyebrow">PARK ELEMENTARY · KNOWLEDGE ADVENTURE</div><h1 id="siteTitle">公園國小五年級・學習魔法小屋</h1></div></div>
+ <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><label class="pill" for="learnerSelect">學習者 <select id="learnerSelect" onchange="switchLearner(this.value)" style="background:#393663;color:white;border:0;font:inherit;font-weight:800"><option value="5">哥哥・五年級</option><option value="3">妹妹・三年級</option></select></label><div class="stats"><div class="pill">⭐ <span id="xpTop">0</span> XP</div><div class="pill">🪙 <span id="coinsTop">0</span> 點</div><div class="pill">🔥 連勝 <span id="streakTop">0</span></div></div></div>
 </header>
 
 <main id="home" class="screen active">
  <section class="hero"><div class="heroRow"><div style="flex:1"><div class="eyebrow">你的冒險，現在開始</div><h2>知識就是最強魔法！</h2><p>挑選學科、迎戰怪物、累積經驗值，收集只屬於你的冒險者造型。答錯也沒關係，理解答案就是下一次的力量。</p><div class="levelbar"><span id="xpBar"></span></div><small class="muted" id="levelText">Lv.1 冒險新手 · 0 / 100 XP</small></div><div class="avatar" id="heroAvatar">🧙🏻‍♂️</div></div></section>
- <div class="sectionTitle"><h2>🗺️ 六大知識領域</h2><small>選擇一座領域開始挑戰</small></div>
+ <div class="sectionTitle"><h2 id="subjectHeading">🗺️ 六大知識領域</h2><small>選擇一座領域開始挑戰</small></div>
  <section class="subjects" id="subjects"></section>
  <p class="muted" id="questionBankStatus" aria-live="polite">正在讀取外部題庫……</p>
- <div class="sectionTitle"><h2>🎯 六科專項訓練</h2><small>選學科、選單元集中練習</small></div>
+ <div class="sectionTitle"><h2 id="unitHeading">🎯 六科專項訓練</h2><small>選學科、選單元集中練習</small></div>
  <section class="card">
   <p class="muted">選擇任一學科與單元集中練習。尚未確認課本範圍的題目會標示為綜合練習；答錯的題目會自動收進錯題本。</p>
   <div id="subjectUnits"></div>
@@ -88,7 +88,7 @@ button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:12px 15px
 </nav>
 </div>
 <script>
-const subjects=[
+const grade5Subjects=[
  {id:'chinese',name:'國語',emoji:'📜',color:'#f4b860',desc:'字詞、成語、閱讀理解',boss:'錯字幽靈',monster:'📚',unit:'文字聖殿',questions:[
   {q:'「一絲不苟」最適合形容哪一種態度？',a:['做事非常認真，不馬虎','做事速度非常快','遇到困難就放棄','喜歡和別人爭吵'],c:0,why:'「一絲不苟」形容做事十分認真，連最細微的地方也不隨便。',hint:'想想「不苟」有不隨便的意思。'},
   {q:'下列哪一句使用了「擬人」的修辭？',a:['月亮像一艘小船','風兒輕輕唱著歌','天空是藍色的','他跑得像箭一樣快'],c:1,why:'把風寫成會唱歌的人，賦予自然現象人的動作，是擬人。',hint:'擬人是把事物寫得像人一樣。'},
@@ -120,6 +120,17 @@ const subjects=[
   {q:'網路上收到陌生人要求個人住址與密碼，應該怎麼做？',a:['立刻全部提供','公開貼到社群','不要提供，並告知可信任的大人','請對方再問一次'],c:2,why:'住址、密碼等個人資訊要妥善保護，遇到可疑要求應找可信任的大人。',hint:'保護個人資料是網路安全的一部分。'},
   {q:'維持健康的生活習慣，哪一項比較適合？',a:['長期熬夜','均衡飲食、規律活動與充足睡眠','只吃一種食物','整天不喝水'],c:1,why:'均衡飲食、適量運動、足夠睡眠和水分都有助於健康。',hint:'健康需要多方面的日常照顧。'}]}
 ];
+let subjects=grade5Subjects;
+const grade3Subjects=[
+ {id:'chinese',name:'國語',emoji:'📜',desc:'南一・第一至第九課',boss:'文字精靈',monster:'📚',unit:'語文森林',questions:[]},
+ {id:'english',name:'英文',emoji:'🔮',desc:'翰林 Here We Go 1・待補單元',boss:'單字小龍',monster:'🐉',unit:'咒語學院',questions:[]},
+ {id:'math',name:'數學',emoji:'🧮',desc:'翰林・五大單元',boss:'數字巨像',monster:'🗿',unit:'數學迷宮',questions:[]},
+ {id:'science',name:'自然',emoji:'🧪',desc:'南一・四大單元',boss:'自然元素獸',monster:'🦎',unit:'自然研究院',questions:[]},
+ {id:'social',name:'社會',emoji:'🗺️',desc:'康軒・待補單元',boss:'探索領主',monster:'🧭',unit:'文明疆域',questions:[]},
+ {id:'health_pe',name:'健康與體育',emoji:'❤️',desc:'翰林・待補單元',boss:'活力守護獸',monster:'🏃',unit:'健康殿堂',questions:[]},
+ {id:'taiwanese',name:'閩南語',emoji:'🗣️',desc:'真平・待補單元',boss:'台語小精靈',monster:'🎤',unit:'語言花園',questions:[]},
+ {id:'arts',name:'藝術',emoji:'🎨',desc:'翰林・待補單元',boss:'色彩精靈',monster:'🖌️',unit:'創意工坊',questions:[]}
+];
 // 從 GitHub Pages 的 questions/ 資料夾載入外部題庫。
 // 題庫格式：每科 JSON 的 questions 陣列，選項答案索引 answer_index 從 0 開始。
 const demoQuestions = Object.fromEntries(subjects.map(s => [s.id, s.questions.slice()]));
@@ -131,12 +142,16 @@ const questionBankFiles = {
   social: 'social.json',
   health: 'health.json'
 };
+const grade3QuestionBankFiles={chinese:'chinese.json',english:'english.json',math:'math.json',science:'science.json',social:'social.json',health_pe:'health_pe.json',taiwanese:'taiwanese.json',arts:'arts.json'};
 async function loadQuestionBanks() {
   const status = document.getElementById('questionBankStatus');
   let loadedCount = 0;
   for (const s of subjects) {
     try {
-      const response = await fetch('./questions/' + questionBankFiles[s.id], { cache: 'no-store' });
+      const file=activeGrade===3?grade3QuestionBankFiles[s.id]:questionBankFiles[s.id];
+      if(!file) continue;
+      const base=activeGrade===3?'./questions/grade3/':'./questions/';
+      const response = await fetch(base + file, { cache: 'no-store' });
       if (!response.ok) continue;
       const data = await response.json();
       if (!Array.isArray(data.questions) || data.questions.length === 0) continue;
@@ -155,7 +170,7 @@ async function loadQuestionBanks() {
         }));
       if (imported.length) {
         // 外部題庫優先，原本的四題示範題保留在後面，避免空題庫時遊戲不能玩。
-        s.questions = imported.concat(demoQuestions[s.id]);
+        s.questions = imported.concat(activeGrade===5?(demoQuestions[s.id]||[]):[]);
         if (data.subject) s.bankLabel = `${data.publisher || ''} ${data.subject}`.trim();
         loadedCount += imported.length;
       }
@@ -166,7 +181,7 @@ async function loadQuestionBanks() {
   }
   if (status) {
     status.textContent = loadedCount
-      ? `✨ 已載入外部題庫 ${loadedCount} 題；各科題目會優先出題。`
+      ? `✨ ${activeGrade} 年級已載入外部題庫 ${loadedCount} 題；各科題目會優先出題。`
       : '目前使用內建示範題。若已上傳 JSON，請確認檔案位於網站根目錄的 questions 資料夾。';
   }
   renderAll();
@@ -180,15 +195,20 @@ const shop=[
  {id:'wings',icon:'🪽',name:'星辰飛翼',cost:220,desc:'向更遠的知識世界出發',avatar:'🧚🏻'}
 ];
 const defaults={xp:0,coins:0,streak:0,answered:0,kills:0,correct:0,bySubject:{},unitStats:{},visited:[],owned:[],avatar:'🧙🏻‍♂️',history:[],wrongQuestions:[],dailyKills:0,dailyDate:new Date().toDateString()};
-let state;try{state={...defaults,...JSON.parse(localStorage.getItem('parkMagicSave')||'{}')};}catch(e){state={...defaults}}
-if(state.dailyDate!==new Date().toDateString()){state.dailyDate=new Date().toDateString();state.dailyKills=0;state.dailySubjects=[]}
+let activeGrade=5;
+function storageKey(grade){return grade===5?'parkMagicSave':'parkMagicSave_grade3'}
+function readState(grade){try{return {...defaults,...JSON.parse(localStorage.getItem(storageKey(grade))||'{}')}}catch(e){return {...defaults}}}
+let state=readState(activeGrade);
+function normalizeDaily(){if(state.dailyDate!==new Date().toDateString()){state.dailyDate=new Date().toDateString();state.dailyKills=0;state.dailySubjects=[]}}
+normalizeDaily();
 let currentSubject=null,currentQuestion=null,selected=-1,answeredThis=false,monsterHP=1,currentLesson=null,currentQueue=null,currentQueueIndex=0,currentMode='normal';
 const $=id=>document.getElementById(id);
-function save(){localStorage.setItem('parkMagicSave',JSON.stringify(state));renderAll()}
+function save(){localStorage.setItem(storageKey(activeGrade),JSON.stringify(state));renderAll()}
+function switchLearner(value){const next=Number(value);if(![3,5].includes(next)||next===activeGrade)return;localStorage.setItem(storageKey(activeGrade),JSON.stringify(state));activeGrade=next;subjects=activeGrade===3?grade3Subjects:grade5Subjects;state=readState(activeGrade);normalizeDaily();currentSubject=null;currentQuestion=null;currentQueue=null;currentMode='normal';$('siteTitle').textContent=`公園國小${activeGrade}年級・學習魔法小屋`;$('subjectHeading').textContent=`🗺️ ${activeGrade===3?'八':'六'}大知識領域`;$('unitHeading').textContent=`🎯 ${activeGrade===3?'八':'六'}科專項訓練`;document.getElementById('learnerSelect').value=String(activeGrade);renderAll();loadQuestionBanks();go('home')}
 function level(){return Math.floor(state.xp/100)+1}
 function xpInto(){return state.xp%100}
 function go(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id).classList.add('active');document.querySelectorAll('.bottomnav button').forEach(b=>b.classList.toggle('active',b.dataset.screen===id));renderAll();window.scrollTo({top:0,behavior:'smooth'})}
-function renderSubjects(){$('subjects').innerHTML=subjects.map(s=>{let p=state.bySubject[s.id]||{answered:0,correct:0,kills:0};let pct=p.answered?Math.round(p.correct/p.answered*100):0;return `<button class="subject" onclick="startBattle('${s.id}')"><span class="emoji">${s.emoji}</span><strong>${s.name}領域</strong><small>${s.desc}</small><div class="progress"><span style="width:${Math.min(100,p.kills*25)}%"></span></div><small>擊敗 ${p.kills||0} 隻怪物 · 答對率 ${pct}%</small></button>`}).join('')}
+function renderSubjects(){$('subjects').innerHTML=subjects.map(s=>{let p=state.bySubject[s.id]||{answered:0,correct:0,kills:0};let pct=p.answered?Math.round(p.correct/p.answered*100):0;const ready=s.questions.length>0;return `<button class="subject" ${ready?`onclick="startBattle('${s.id}')"`:'disabled'}><span class="emoji">${s.emoji}</span><strong>${s.name}領域</strong><small>${s.desc}</small><div class="progress"><span style="width:${Math.min(100,p.kills*25)}%"></span></div><small>${ready?`擊敗 ${p.kills||0} 隻怪物 · 答對率 ${pct}%`:'📘 課本範圍待補，暫未開放'}</small></button>`}).join('')}
 function renderShop(){$('shopItems').innerHTML=shop.map(i=>{let own=state.owned.includes(i.id);return `<div class="item"><div class="itemIcon">${i.icon}</div><h3>${i.name}</h3><div class="muted">${i.desc}</div><p>🪙 ${i.cost} 點</p>${own?'<div class="owned">✓ 已解鎖</div><button class="secondary" onclick="equip(\''+i.id+'\')">穿戴造型</button>':`<button ${state.coins<i.cost?'disabled':''} onclick="buy('${i.id}')">解鎖外觀</button>`}</div>`}).join('')}
 function renderCharacter(){$('bigAvatar').textContent=state.avatar;$('heroAvatar').textContent=state.avatar;$('charLevel').textContent=level();$('answered').textContent=state.answered;$('kills').textContent=state.kills;$('charTitle').textContent=level()>=10?'傳說知識勇者':level()>=5?'進階探索者':'見習冒險者';$('charSummary').textContent=`已累積 ${state.xp} XP，讓你的知識魔力持續成長。`;$('avatarChoices').innerHTML=['🧙🏻‍♂️','🧝🏻','🦸🏻','🧙🏻','🤴🏻','🧚🏻'].map(a=>`<button class="${state.avatar===a?'':'secondary'}" style="font-size:27px;padding:12px" onclick="setAvatar('${a}')">${a}</button>`).join('');$('achievements').innerHTML=[['🌱','初次啟程','完成第一題',state.answered>=1],['⚔️','初戰告捷','擊敗第一隻怪物',state.kills>=1],['📚','勤學冒險者','累積答題 10 題',state.answered>=10],['🔥','連擊新星','連續答對 3 題',state.streak>=3],['🛍️','收藏家','解鎖第一件外觀',state.owned.length>=1],['🌈','六域探索','六個學科都挑戰過',state.visited.length>=6]].map(a=>`<div class="task"><div class="taskIcon">${a[0]}</div><div class="taskText"><b>${a[1]} ${a[3]?'✓':''}</b><small>${a[2]}</small></div><span class="badge">${a[3]?'已達成':'未解鎖'}</span></div>`).join('')}
 function renderProgress(){renderMathAnalytics();$('progressXP').textContent=state.xp;$('progressCoins').textContent=state.coins;$('progressSubjects').innerHTML=subjects.map(s=>{let p=state.bySubject[s.id]||{answered:0,correct:0,kills:0};let pct=p.answered?Math.round(p.correct/p.answered*100):0;return `<div style="margin:12px 0"><div style="display:flex;justify-content:space-between;gap:8px"><b>${s.emoji} ${s.name}</b><small class="muted">${p.answered} 題 · 答對率 ${pct}% · 擊敗 ${p.kills} 隻</small></div><div class="progress" style="margin-top:7px"><span style="width:${pct}%"></span></div></div>`}).join('');$('history').innerHTML=state.history.length?state.history.slice(0,8).map(h=>`<div class="task"><div class="taskIcon">${h.ok?'✨':'📘'}</div><div class="taskText"><b>${h.subject} · ${h.ok?'答對':'再接再厲'}</b><small>${h.question}</small></div><span class="badge">${h.ok?'+10 XP':'複習'}</span></div>`).join(''):'<p class="muted">還沒有冒險紀錄。選一個學科，開始你的第一場戰鬥吧！</p>'}
@@ -229,7 +249,7 @@ function renderSubjectUnits(){
   });
   const buttons=[...groups.entries()].map(([lesson,g])=>`<button class="unitBtn" onclick="startUnitPractice('${subject.id}','${lesson}')"><strong>${lesson==='示範練習'?'📚 示範練習':lesson}</strong><small>${g.count} 題 · ${[...g.topics].slice(0,2).join('、')||subject.name+'練習'}</small></button>`).join('');
   const isDemoOnly=!subject.bankLabel;
-  const note=isDemoOnly?'課本範圍尚待確認，目前只有示範題，暫不列入正式考前範圍。':`題庫來源：${subject.bankLabel}。示範題會另外標示。`;
+  const note=!subject.questions.length?'課本單元與題目尚待補充，目前暫不開放練習。':(isDemoOnly?'課本範圍尚待確認，目前只有示範題，暫不列入正式考前範圍。':`題庫來源：${subject.bankLabel}。示範題會另外標示。`);
   return `<div style="margin:14px 0"><b>${subject.emoji} ${subject.name}</b><small class="muted" style="display:block;margin-top:4px">${note}</small><div class="unitGrid" style="margin-top:8px">${buttons}</div></div>`;
  }).join('');
 }
@@ -254,7 +274,7 @@ function enterBattle(){
  selected=-1;answeredThis=false;monsterHP=1;loadCurrentQuestion();
 }
 function startBattle(id){
- currentSubject=subjects.find(s=>s.id===id);currentLesson=null;currentQueue=null;currentQueueIndex=0;currentMode='normal';
+ currentSubject=subjects.find(s=>s.id===id);if(!currentSubject||!currentSubject.questions.length){alert('這個學科的題庫還在準備中喔！');return;}currentLesson=null;currentQueue=null;currentQueueIndex=0;currentMode='normal';
  if(!state.visited.includes(id))state.visited.push(id);
  if(!state.dailySubjects)state.dailySubjects=[];
  if(!state.dailySubjects.includes(id))state.dailySubjects.push(id);
@@ -299,7 +319,9 @@ function buy(id){let i=shop.find(x=>x.id===id);if(!i||state.owned.includes(id)||
 function equip(id){let i=shop.find(x=>x.id===id);if(i&&state.owned.includes(id)){state.avatar=i.avatar;save()}}
 function setAvatar(a){state.avatar=a;save()}
 function exportSave(){let blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='公園國小學習魔法小屋存檔.json';a.click();URL.revokeObjectURL(a.href)}
-function resetGame(){if(confirm('確定重設？這會清除目前瀏覽器儲存的遊戲進度。')){localStorage.removeItem('parkMagicSave');state={...defaults,bySubject:{},visited:[],owned:[],history:[]};save();go('home')}}
+function resetGame(){if(confirm('確定重設？這會清除目前學習者的遊戲進度。')){localStorage.removeItem(storageKey(activeGrade));state={...defaults,bySubject:{},visited:[],owned:[],history:[]};save();go('home')}}
+document.getElementById('learnerSelect').value=String(activeGrade);
+document.getElementById('siteTitle').textContent=`公園國小${activeGrade}年級・學習魔法小屋`;
 renderAll();
 loadQuestionBanks();
 </script>
