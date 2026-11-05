@@ -229,6 +229,184 @@
       "explanation": "共同遵守合理規則有助於安全、有秩序地使用公共空間。",
       "source_type": "original_practice",
       "review_status": "draft"
+    },
+    {
+      "id": "H011",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "地圖比例尺",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "地圖比例尺表示圖上 1 公分代表實際 2 公里。兩地在地圖上相距 3.5 公分，實際距離約為多少？",
+      "options": [
+        "5.5 公里",
+        "7 公里",
+        "3.5 公里",
+        "2 公里"
+      ],
+      "answer_index": 1,
+      "explanation": "3.5 × 2＝7，實際距離約 7 公里。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "H012",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "相對位置",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "地圖上甲地在乙地的東方，乙地在丙地的北方。相對於丙地，甲地大致位於哪個方向？",
+      "options": [
+        "東北方",
+        "西北方",
+        "東南方",
+        "西南方"
+      ],
+      "answer_index": 0,
+      "explanation": "乙在丙的北方，甲又在乙的東方，因此甲相對丙大致在東北方。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "H013",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "資料判讀",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "想比較臺灣北部與南部某月份的平均氣溫，哪一種資料最適合？",
+      "options": [
+        "兩地同月份、相同統計方式的氣象資料",
+        "兩張不同年份的旅遊照片",
+        "一篇沒有日期的傳聞",
+        "只記錄某一天的個人感受"
+      ],
+      "answer_index": 0,
+      "explanation": "比較時應使用相同期間與統計方式的資料，避免條件不同造成誤判。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "H014",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "地理位置與交流",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "一個地方鄰近港口且交通便利，長期可能帶來哪一種影響？",
+      "options": [
+        "居民一定從事相同工作",
+        "當地不會受到外來文化影響",
+        "完全不需要道路",
+        "較容易與其他地區進行貨物及人員交流"
+      ],
+      "answer_index": 3,
+      "explanation": "港口和交通便利有助於人員、貨物與文化交流，但不代表每個地方發展都相同。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "H015",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "社會規範與權利",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "班級討論訂定使用球場的規則時，有同學提出不同意見。哪一種做法最能兼顧公平？",
+      "options": [
+        "只讓球技最好的人決定",
+        "讓大家說明需求，再討論共同遵守的規則",
+        "由最先到場的人永久使用",
+        "不訂規則，發生衝突再處理"
+      ],
+      "answer_index": 1,
+      "explanation": "公共空間由多人共同使用，透過討論訂出合理規則較能兼顧不同需求。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "H016",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "規範情境判斷",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "小組約定每個人都要完成一部分報告，但其中一人沒有完成。最適合的處理方式是？",
+      "options": [
+        "直接把他的名字刪掉，不溝通",
+        "全組都停止工作",
+        "先了解原因，再討論補救方式與後續分工",
+        "假裝工作已經完成"
+      ],
+      "answer_index": 2,
+      "explanation": "先了解原因並協調補救，能兼顧責任、溝通與團隊合作。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "H017",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "規範與公共利益",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "公園告示提醒民眾將垃圾帶走。遵守這項規範最主要有助於什麼？",
+      "options": [
+        "維護環境整潔並保障大家使用公共空間的品質",
+        "讓公園不再需要管理",
+        "讓所有人只能在家活動",
+        "使垃圾自然消失"
+      ],
+      "answer_index": 0,
+      "explanation": "帶走垃圾能減少環境污染，維護公共空間品質。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "H018",
+      "subject": "社會",
+      "publisher": "康軒",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "規則與例外",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "下雨天，學校暫停操場活動並請學生改到室內。這項調整最能說明規則應如何運用？",
+      "options": [
+        "規則訂好後任何情況都不能改",
+        "只要有人不喜歡就取消規則",
+        "規則只為了處罰學生",
+        "依安全與實際情況合理調整，仍以共同利益為考量"
+      ],
+      "answer_index": 3,
+      "explanation": "合理規範應考量安全與實際情況，必要時作適當調整。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
     }
-  ]
+  ],
+  "status": "original_practice_expanded_needs_textbook_verification",
+  "note": "原創練習題，非出版社官方題目；新題依目前題庫所列地圖判讀與社會規範主題擴充，須先核對康軒五上實際單元內容後再作正式範圍標記。"
 }
