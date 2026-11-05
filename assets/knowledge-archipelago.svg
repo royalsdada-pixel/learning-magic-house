@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100">
+<defs>
+ <linearGradient id="sea" x2="0" y2="1"><stop stop-color="#0b8299"/><stop offset=".42" stop-color="#07516f"/><stop offset="1" stop-color="#041b39"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#54e9f4" stop-opacity=".9"/><stop offset="1" stop-color="#126b9a" stop-opacity="0"/></radialGradient>
+ <linearGradient id="grass" x2=".2" y2="1"><stop stop-color="#a6bd75"/><stop offset=".42" stop-color="#527d55"/><stop offset="1" stop-color="#254d43"/></linearGradient>
+ <linearGradient id="cliff" x2="0" y2="1"><stop stop-color="#8f7c66"/><stop offset=".35" stop-color="#4d4d52"/><stop offset="1" stop-color="#182b42"/></linearGradient>
+ <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#fff0ad"/><stop offset=".5" stop-color="#d4a75b"/><stop offset="1" stop-color="#684b39"/></linearGradient>
+ <linearGradient id="waterfall" x2="0" y2="1"><stop stop-color="#e4ffff"/><stop offset=".3" stop-color="#6ce7f3"/><stop offset="1" stop-color="#25b4dd" stop-opacity=".08"/></linearGradient>
+ <radialGradient id="crystal"><stop stop-color="#e6ffff"/><stop offset=".35" stop-color="#69efff"/><stop offset="1" stop-color="#3159cb"/></radialGradient>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+ <filter id="glowfx" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="texture"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="3" seed="8" result="n"/><feColorMatrix in="n" type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .18"/></feComponentTransfer><feBlend in="SourceGraphic" in2="n" mode="soft-light"/></filter>
+ <g id="tree"><path d="M0 0v26" stroke="#483c2f" stroke-width="5"/><circle cx="-8" cy="-8" r="15" fill="#244e3d"/><circle cx="8" cy="-15" r="17" fill="#527e50"/><circle cy="-27" r="14" fill="#789b5b"/><circle cx="-10" cy="-18" r="5" fill="#b0c47a" opacity=".5"/></g>
+ <g id="pine"><path d="M0 0v30" stroke="#55432f" stroke-width="4"/><path d="M0-42L-23-5H-10L-27 17H27L10-5H23Z" fill="#1c4b43" stroke="#143a3b" stroke-width="2"/><path d="M0-34L-13-7H-4L-16 9H16L4-7H13Z" fill="#648b58"/></g>
+ <g id="house"><path d="M-27 0V-34H27V0Z" fill="#d9c59b" stroke="#604c3d" stroke-width="3"/><path d="M-34-32L0-59 34-32Z" fill="#98523e" stroke="#553c36" stroke-width="3"/><rect x="-8" y="-23" width="16" height="23" fill="#574334"/><rect x="-22" y="-27" width="10" height="12" fill="#8bc9cf"/></g>
+ <g id="tower"><path d="M-20 0V-72H20V0Z" fill="#c9c0a8" stroke="#5b5149" stroke-width="3"/><path d="M-28-70L0-103 28-70Z" fill="#875247" stroke="#4b3d3b" stroke-width="3"/><rect x="-6" y="-51" width="12" height="22" fill="#493d3c"/><path d="M0-103V-119" stroke="#f3d78e" stroke-width="3"/></g>
+ <g id="crystal"><path d="M0-53L17-19 10 0H-10L-17-19Z" fill="url(#crystal)" stroke="#c8ffff" stroke-width="2"/><path d="M0-53V0M-17-19L0-9 17-19" fill="none" stroke="#eaffff" stroke-width="2"/></g>
+ <g id="rock"><path d="M-26 0L-17-19 2-26 22-12 28 0Z" fill="#625d5a" stroke="#303b48" stroke-width="3"/><path d="M-17-19L2-26 9-12-5-9Z" fill="#c0a77c" opacity=".5"/></g>
+</defs>
+<rect width="1600" height="1100" fill="url(#sea)"/>
+<g opacity=".32"><ellipse cx="800" cy="500" rx="690" ry="470" fill="url(#glow)"/><ellipse cx="250" cy="250" rx="260" ry="180" fill="url(#glow)"/><ellipse cx="1330" cy="820" rx="300" ry="200" fill="url(#glow)"/></g>
+<g fill="none" stroke="#8fe7e4" opacity=".17" stroke-width="4"><path d="M-40 150Q190 60 400 145T820 130T1240 160T1660 120"/><path d="M-30 420Q190 330 420 420T850 410T1270 430T1640 390"/><path d="M-20 800Q220 700 430 800T850 780T1280 810T1640 760"/><path d="M-20 1010Q200 920 420 1010T850 980T1260 1015T1640 970"/></g>
+<g fill="#c8fbf2" opacity=".35"><circle cx="85" cy="490" r="5"/><circle cx="1470" cy="300" r="4"/><circle cx="1330" cy="980" r="6"/><circle cx="540" cy="930" r="4"/><circle cx="990" cy="90" r="5"/><circle cx="1520" cy="700" r="3"/></g>
+<!-- shadow islands -->
+<g fill="#031426" opacity=".65" filter="url(#shadow)"><ellipse cx="270" cy="260" rx="230" ry="125"/><ellipse cx="800" cy="260" rx="220" ry="120"/><ellipse cx="1320" cy="250" rx="230" ry="130"/><ellipse cx="310" cy="760" rx="250" ry="145"/><ellipse cx="850" cy="680" rx="250" ry="145"/><ellipse cx="1320" cy="760" rx="250" ry="145"/></g>
+<!-- golden energy routes behind islands -->
+<g fill="none" stroke-linecap="round"><path d="M390 260Q520 130 640 210T920 230Q1090 140 1180 245T1310 450Q1180 570 1040 590T850 650Q640 780 510 740T310 760" stroke="#1b293e" stroke-width="28"/><path d="M390 260Q520 130 640 210T920 230Q1090 140 1180 245T1310 450Q1180 570 1040 590T850 650Q640 780 510 740T310 760" stroke="url(#gold)" stroke-width="15"/><path d="M390 250Q520 120 640 200T920 220Q1090 130 1180 235T1310 440Q1180 560 1040 580T850 640Q640 770 510 730T310 750" stroke="#69e9ff" stroke-width="3" stroke-dasharray="3 18" filter="url(#glowfx)"/></g>
+<!-- island 1: ancient forest and library -->
+<g transform="translate(260 245) rotate(-7)">
+ <path d="M-220 0L-178-104-90-153 38-145 174-95 222-14 178 90 60 139-82 122-190 72Z" fill="url(#cliff)" stroke="#1b2b3c" stroke-width="9"/>
+ <path d="M-220-20L-178-124-90-173 38-165 174-115 222-34 178 70 60 119-82 102-190 52Z" fill="url(#grass)" stroke="#d0bd8c" stroke-width="10" filter="url(#texture)"/>
+ <path d="M-180-50Q-80-105 5-62T170-72M-150 45Q-65 2 20 35T150 18" fill="none" stroke="#b4b47c" stroke-width="7" opacity=".8"/>
+ <use href="#tower" x="-100" y="35"/><use href="#house" x="35" y="15"/><use href="#house" x="105" y="42"/>
+ <use href="#tree" x="-175" y="-55"/><use href="#tree" x="-140" y="32"/><use href="#tree" x="-55" y="-115"/><use href="#tree" x="35" y="-120"/><use href="#tree" x="145" y="-70"/><use href="#tree" x="180" y="12"/><use href="#pine" x="75" y="-88"/>
+ <path d="M-60-20Q-5-62 55-28T130-34" fill="none" stroke="#e9d3a1" stroke-width="8"/>
+ <path d="M-60-20Q-5-62 55-28T130-34" fill="none" stroke="#fff1c7" stroke-width="2" stroke-dasharray="3 8"/>
+ <path d="M-188 85Q-200 130-222 168" stroke="url(#waterfall)" stroke-width="15" fill="none"/><path d="M168 77Q185 128 204 154" stroke="url(#waterfall)" stroke-width="13" fill="none"/>
+</g>
+<!-- island 2: academy and crystal spires -->
+<g transform="translate(790 235) rotate(3)">
+ <path d="M-205 0L-160-112-54-151 85-130 194-75 218 5 158 108 25 140-115 105-195 55Z" fill="url(#cliff)" stroke="#1b2b3c" stroke-width="9"/>
+ <path d="M-205-20L-160-132-54-171 85-150 194-95 218-15 158 88 25 120-115 85-195 35Z" fill="url(#grass)" stroke="#d0bd8c" stroke-width="10" filter="url(#texture)"/>
+ <path d="M-150 38Q-65-5 5 30T150 0" fill="none" stroke="#e5d4a7" stroke-width="9"/>
+ <use href="#tower" x="-100" y="35"/><use href="#tower" x="95" y="15"/><use href="#house" x="0" y="35"/>
+ <use href="#crystal" x="-35" y="-95" transform="scale(1.4)"/><use href="#crystal" x="18" y="-110"/><use href="#crystal" x="65" y="-84" transform="scale(.8)"/>
+ <use href="#tree" x="-170" y="-50"/><use href="#tree" x="160" y="-50"/><use href="#pine" x="145" y="30"/>
+ <path d="M-85 88Q-60 135-48 177M128 75Q152 125 176 160" stroke="url(#waterfall)" stroke-width="16" fill="none"/>
+</g>
+<!-- island 3: volcanic science realm -->
+<g transform="translate(1325 250) rotate(7)">
+ <path d="M-220 5L-175-104-75-153 50-143 176-91 220-5 166 96 40 136-95 113-190 65Z" fill="url(#cliff)" stroke="#1b2b3c" stroke-width="9"/>
+ <path d="M-220-15L-175-124-75-173 50-163 176-111 220-25 166 76 40 116-95 93-190 45Z" fill="url(#grass)" stroke="#d0bd8c" stroke-width="10" filter="url(#texture)"/>
+ <path d="M-65-35L-12-158 38-188 82-120 120-40Z" fill="#4c4648" stroke="#d4a779" stroke-width="6"/>
+ <path d="M-12-158L38-188 82-120 38-100Z" fill="#e65e32"/><path d="M18-170Q-15-210 18-245Q50-211 52-184Q78-222 99-194Q103-158 54-133Z" fill="#ffb25b" filter="url(#glowfx)"/>
+ <path d="M-100 10Q-20-32 65 0T160-12" fill="none" stroke="#c9b783" stroke-width="8"/>
+ <use href="#tower" x="-125" y="35"/><use href="#house" x="115" y="28"/><use href="#pine" x="-170" y="-30"/><use href="#rock" x="150" y="-42"/>
+ <path d="M-160 85Q-177 137-198 176M172 68Q193 124 214 160" stroke="url(#waterfall)" stroke-width="15" fill="none"/>
+</g>
+<!-- island 4: ancient civilization and harbour -->
+<g transform="translate(300 745) rotate(-4)">
+ <path d="M-238 0L-195-112-90-166 44-152 190-105 240-20 180 100 45 148-110 125-210 67Z" fill="url(#cliff)" stroke="#1b2b3c" stroke-width="9"/>
+ <path d="M-238-20L-195-132-90-186 44-172 190-125 240-40 180 80 45 128-110 105-210 47Z" fill="url(#grass)" stroke="#d0bd8c" stroke-width="10" filter="url(#texture)"/>
+ <path d="M-90 35L-45-75 0 35Z" fill="#bda77e" stroke="#6c5947" stroke-width="5"/><path d="M-45-75L0 35 45-75Z" fill="#d1bd92" stroke="#6c5947" stroke-width="5"/>
+ <use href="#tower" x="115" y="15"/><use href="#house" x="-150" y="30"/><use href="#house" x="45" y="45"/>
+ <use href="#tree" x="-180" y="-50"/><use href="#tree" x="170" y="-45"/><use href="#pine" x="70" y="-105"/>
+ <path d="M-175 75Q-90 22-10 60T160 40" fill="none" stroke="#e7d5a5" stroke-width="8"/>
+ <path d="M-190 90Q-222 150-250 175M185 80Q210 140 236 176" stroke="url(#waterfall)" stroke-width="16" fill="none"/>
+ <path d="M-210 170H-90L-65 188H-230Z" fill="#9a6b45" stroke="#ead5a2" stroke-width="5"/><path d="M-180 170V140M-120 170V140" stroke="#e7d3a0" stroke-width="6"/>
+</g>
+<!-- island 5: gearworks and number maze -->
+<g transform="translate(865 680) rotate(5)">
+ <path d="M-235 0L-190-108-86-162 48-150 192-102 236-12 178 100 45 146-105 123-210 65Z" fill="url(#cliff)" stroke="#1b2b3c" stroke-width="9"/>
+ <path d="M-235-20L-190-128-86-182 48-170 192-122 236-32 178 80 45 126-105 103-210 45Z" fill="url(#grass)" stroke="#d0bd8c" stroke-width="10" filter="url(#texture)"/>
+ <g fill="none" stroke="#c69b57" stroke-width="13"><circle cx="-20" cy="-35" r="64"/><circle cx="105" cy="0" r="42"/></g><g fill="none" stroke="#eed59a" stroke-width="4"><circle cx="-20" cy="-35" r="47"/><circle cx="105" cy="0" r="27"/></g>
+ <g fill="#c79b5b"><circle cx="-20" cy="-99" r="9"/><circle cx="-20" cy="29" r="9"/><circle cx="-84" cy="-35" r="9"/><circle cx="44" cy="-35" r="9"/><circle cx="105" cy="-42" r="8"/><circle cx="105" cy="42" r="8"/></g>
+ <use href="#tower" x="-145" y="25"/><use href="#house" x="150" y="35"/><use href="#pine" x="-180" y="-45"/>
+ <path d="M-180 75Q-80 22 5 55T180 35" fill="none" stroke="#e5d3a2" stroke-width="8"/>
+ <path d="M-180 88Q-195 140-214 176M185 72Q205 130 224 160" stroke="url(#waterfall)" stroke-width="15" fill="none"/>
+</g>
+<!-- island 6: coliseum and vitality realm -->
+<g transform="translate(1325 760) rotate(6)">
+ <path d="M-225 0L-185-108-82-157 48-150 182-102 228-12 174 100 40 145-104 122-202 63Z" fill="url(#cliff)" stroke="#1b2b3c" stroke-width="9"/>
+ <path d="M-225-20L-185-128-82-177 48-170 182-122 228-32 174 80 40 125-104 102-202 43Z" fill="url(#grass)" stroke="#d0bd8c" stroke-width="10" filter="url(#texture)"/>
+ <ellipse cx="5" cy="-15" rx="112" ry="72" fill="#9b8b70" stroke="#e4d2a2" stroke-width="10"/><ellipse cx="5" cy="-15" rx="80" ry="47" fill="#477d5d" stroke="#cdb98c" stroke-width="8"/><ellipse cx="5" cy="-15" rx="55" ry="28" fill="#4b9b67" stroke="#dfcda2" stroke-width="4"/>
+ <path d="M-140 70Q-60 30 15 62T155 40" fill="none" stroke="#e6d5a4" stroke-width="8"/>
+ <use href="#tree" x="-180" y="-45"/><use href="#tree" x="180" y="-48"/><use href="#tower" x="-110" y="35"/><use href="#house" x="135" y="30"/>
+ <path d="M-185 88Q-205 140-224 175M185 82Q210 130 235 164" stroke="url(#waterfall)" stroke-width="15" fill="none"/>
+</g>
+<!-- scattered islets, crystal reefs and sea stacks -->
+<g fill="url(#grass)" stroke="#bcae82" stroke-width="6"><path d="M85 440l36-44 52-10 42 26-12 45-58 20-53-13Z"/><path d="M1030 420l34-45 48-7 42 30-10 46-54 17-48-14Z"/><path d="M560 920l35-45 55-9 39 31-15 45-54 16-52-15Z"/><path d="M1510 560l30-38 42-7 34 27-12 39-46 14-40-13Z"/></g>
+<g filter="url(#glowfx)"><use href="#crystal" transform="translate(145 435) scale(.9)"/><use href="#crystal" transform="translate(1090 430) scale(.7)"/><use href="#crystal" transform="translate(610 920) scale(.8)"/></g>
+<!-- bridges, stone piers and suspended rope links -->
+<g fill="none" stroke-linecap="round"><path d="M455 270Q535 210 595 232" stroke="#192d43" stroke-width="25"/><path d="M455 270Q535 210 595 232" stroke="url(#gold)" stroke-width="13"/><path d="M455 264Q535 204 595 226" stroke="#fff0c0" stroke-width="2.5" stroke-dasharray="4 12" filter="url(#glowfx)"/><path d="M980 260Q1080 205 1145 275" stroke="#192d43" stroke-width="24"/><path d="M980 260Q1080 205 1145 275" stroke="url(#gold)" stroke-width="12"/><path d="M980 254Q1080 199 1145 269" stroke="#7ef4ff" stroke-width="3" stroke-dasharray="4 12" filter="url(#glowfx)"/><path d="M495 770Q610 650 670 665" stroke="#192d43" stroke-width="25"/><path d="M495 770Q610 650 670 665" stroke="url(#gold)" stroke-width="12"/><path d="M495 764Q610 644 670 659" stroke="#fff0c0" stroke-width="3" stroke-dasharray="4 12" filter="url(#glowfx)"/><path d="M1095 690Q1160 625 1190 660" stroke="#192d43" stroke-width="24"/><path d="M1095 690Q1160 625 1190 660" stroke="url(#gold)" stroke-width="12"/><path d="M1095 684Q1160 619 1190 654" stroke="#7ef4ff" stroke-width="3" stroke-dasharray="4 12" filter="url(#glowfx)"/></g>
+<!-- sailing ships -->
+<g stroke="#d5c39b" stroke-width="4"><path d="M650 865h135l-25 28h-90Z" fill="#76503a"/><path d="M715 865V780" fill="none"/><path d="M715 785L670 842H715Z" fill="#f0e3c3"/><path d="M722 800L760 846H722Z" fill="#b8c7c0"/><path d="M1080 500h100l-20 22h-65Z" fill="#76503a"/><path d="M1130 500V435" fill="none"/><path d="M1130 440L1095 485H1130Z" fill="#eee0bf"/></g>
+<!-- floating stone shards -->
+<g fill="url(#cliff)" stroke="#b4a17d" stroke-width="3"><path d="M610 90l20 35-13 65-26-40Z"/><path d="M1040 90l28 45-17 58-29-37Z"/><path d="M1500 420l24 38-12 58-26-36Z"/><path d="M90 850l26 45-18 58-29-36Z"/></g>
+<g fill="#d6ffff" opacity=".7"><circle cx="180" cy="90" r="4"/><circle cx="700" cy="90" r="3"/><circle cx="1420" cy="100" r="5"/><circle cx="1510" cy="940" r="4"/><circle cx="410" cy="980" r="4"/><circle cx="920" cy="1000" r="3"/></g>
+</svg>
