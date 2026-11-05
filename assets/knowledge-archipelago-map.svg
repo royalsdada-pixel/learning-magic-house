@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="知識魔法群島奇幻地圖">
+<defs>
+ <linearGradient id="sea" x2="0" y2="1"><stop stop-color="#087f9a"/><stop offset=".52" stop-color="#07506f"/><stop offset="1" stop-color="#052b4a"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#5ee7e8" stop-opacity=".42"/><stop offset="1" stop-color="#5ee7e8" stop-opacity="0"/></radialGradient>
+ <linearGradient id="grass" x2=".2" y2="1"><stop stop-color="#c7df91"/><stop offset=".55" stop-color="#6fa66f"/><stop offset="1" stop-color="#397b69"/></linearGradient>
+ <linearGradient id="rock" x2="0" y2="1"><stop stop-color="#d7c49a"/><stop offset="1" stop-color="#76634e"/></linearGradient>
+ <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#fff1b8"/><stop offset=".5" stop-color="#d9a94e"/><stop offset="1" stop-color="#8a5934"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="12"/><feOffset dy="18"/><feComponentTransfer><feFuncA type="linear" slope=".4"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <pattern id="waves" width="110" height="60" patternUnits="userSpaceOnUse"><path d="M0 20q25-12 50 0t60 0M-30 48q25-12 50 0t60 0" fill="none" stroke="#79d6d9" stroke-opacity=".18" stroke-width="2"/></pattern>
+</defs>
+<rect width="1200" height="800" fill="url(#sea)"/><rect width="1200" height="800" fill="url(#waves)"/>
+<ellipse cx="600" cy="400" rx="620" ry="420" fill="url(#glow)"/>
+<g fill="none" stroke="#9de8e6" stroke-opacity=".32" stroke-width="3"><path d="M0 330q180-80 350 5t340 0 510-20"/><path d="M0 700q200-80 390 0t390-10 420 0"/></g>
+<g fill="#e8fbef" opacity=".7"><path d="M70 105q25-35 55 0 35-25 60 5H70z"/><path d="M880 80q28-34 54 0 33-24 58 5H880z"/><path d="M1010 400q20-28 42 0 27-20 45 4h-87z"/></g>
+<g fill="#f7d98b" opacity=".8"><circle cx="300" cy="100" r="4"/><circle cx="760" cy="90" r="3"/><circle cx="1110" cy="300" r="4"/><circle cx="80" cy="590" r="3"/><circle cx="850" cy="720" r="4"/></g>
+<!-- northern forest island -->
+<g filter="url(#shadow)"><path d="M80 200l28-55 88-38 105 16 73 53 12 53-48 45-113 21-105-30-52-35z" fill="url(#rock)"/><path d="M93 192l34-45 82-30 100 18 63 48-35 46-112 25-96-28z" fill="url(#grass)"/>
+<g fill="#326d4d"><circle cx="142" cy="158" r="34"/><circle cx="178" cy="139" r="42"/><circle cx="223" cy="150" r="36"/><circle cx="278" cy="161" r="42"/><circle cx="319" cy="183" r="29"/></g>
+<g fill="#82b96c"><circle cx="132" cy="147" r="20"/><circle cx="176" cy="124" r="24"/><circle cx="226" cy="139" r="20"/><circle cx="278" cy="146" r="23"/></g>
+<path d="M205 207v-70h70v70" fill="#ead8ae" stroke="#775b47" stroke-width="5"/><path d="M193 142l47-42 47 42z" fill="#a95345" stroke="#75453e" stroke-width="5"/><path d="M222 207v-34h18v34m20 0v-34h15v34" fill="#73513e"/>
+<path d="M335 207q-15-35 10-48 24 12 12 48" fill="#e3f5ef" opacity=".75"/></g>
+<!-- academy island -->
+<g filter="url(#shadow)"><path d="M455 178l50-63 110-30 115 28 63 66-18 72-93 38-131-7-92-43z" fill="url(#rock)"/><path d="M469 177l51-49 99-26 99 27 60 53-28 53-98 32-117-13-68-38z" fill="url(#grass)"/>
+<g fill="#7766a3" stroke="#e7d7ae" stroke-width="5"><path d="M554 205V135h42v70z"/><path d="M620 208V108h55v100z"/><path d="M690 205v-67h42v67z"/></g><g fill="#a65d59"><path d="M544 137l31-35 31 35z"/><path d="M606 112l42-52 42 52z"/><path d="M681 140l30-34 30 34z"/></g><g fill="#ffe9ad"><path d="M633 208v-42h28v42z"/><path d="M564 205v-29h16v29z"/><path d="M701 205v-29h16v29z"/></g><path d="M647 61V34" stroke="#f8e5a4" stroke-width="5"/><path d="M647 34l30 12-30 12z" fill="#d65e55"/></g>
+<!-- gear island -->
+<g filter="url(#shadow)"><path d="M866 197l37-59 100-33 111 28 57 63-21 73-94 34-120-17-74-45z" fill="url(#rock)"/><path d="M882 194l40-44 82-27 92 27 50 49-33 52-91 28-105-19-45-35z" fill="#a8a18a"/>
+<g fill="#c28c47" stroke="#6c573d" stroke-width="5"><circle cx="1015" cy="181" r="53"/><circle cx="1015" cy="181" r="22" fill="#4d6170"/><path d="M1003 112h24v24h-24zm0 114h24v24h-24zm-67-57h25v24h-25zm134 0h25v24h-25z"/></g><path d="M965 190l-15 30 36-9 11-29z" fill="#e8c56c"/></g>
+<!-- southern elemental island -->
+<g filter="url(#shadow)"><path d="M95 555l30-72 102-35 110 28 56 68-31 77-104 42-112-28-65-39z" fill="url(#rock)"/><path d="M113 552l32-58 89-28 91 27 48 54-33 58-93 34-92-28-47-34z" fill="#5e9b86"/>
+<path d="M202 553l40-94 38 94z" fill="#8a776e"/><path d="M242 459l-12 31 20-12 15 30-3-42z" fill="#ef9560"/><path d="M250 478l-10 23 20-12z" fill="#ffda86"/>
+<g fill="#6fc4c1"><circle cx="158" cy="554" r="15"/><circle cx="320" cy="563" r="19"/><circle cx="300" cy="520" r="12"/></g><path d="M154 520q-18-30 0-46 18 16 0 46" fill="#d3f6e8"/></g>
+<!-- civilization island -->
+<g filter="url(#shadow)"><path d="M474 526l39-64 110-38 114 29 68 59-27 76-109 42-121-19-70-43z" fill="url(#rock)"/><path d="M492 522l44-50 90-29 94 28 57 52-36 55-97 27-105-24-47-30z" fill="#c5a878"/>
+<g fill="#e6d4a6" stroke="#8a6847" stroke-width="4"><path d="M548 533v-48h32v48z"/><path d="M588 533v-69h43v69z"/><path d="M639 533v-51h35v51z"/><path d="M680 533v-40h29v40z"/></g><g fill="#9c694b"><path d="M541 487l23-24 23 24z"/><path d="M580 467l29-32 29 32z"/><path d="M633 485l23-25 23 25z"/></g><path d="M609 533v-34h15v34" fill="#79513d"/></g>
+<!-- sports island -->
+<g filter="url(#shadow)"><path d="M866 572l33-67 107-39 110 26 58 65-25 74-104 40-116-22-63-39z" fill="url(#rock)"/><path d="M882 570l38-54 91-30 94 27 49 52-35 54-92 28-99-26-46-31z" fill="#79a77c"/>
+<ellipse cx="1041" cy="568" rx="83" ry="43" fill="#c9d9b3" stroke="#8b6345" stroke-width="8"/><ellipse cx="1041" cy="568" rx="61" ry="29" fill="#75a9a1" stroke="#f5e6b5" stroke-width="4"/><path d="M980 568h122M1041 539v58" stroke="#fff2c8" stroke-width="4"/><path d="M1000 543l12-22 12 22m38 0 12-22 12 22" fill="none" stroke="#fff1c7" stroke-width="5"/></g>
+<!-- small connecting islets and bridges -->
+<g fill="#8ac6a4" stroke="#d4c69c" stroke-width="5"><path d="M350 390l25-34 44-8 38 21-12 35-53 14z"/><path d="M770 378l24-30 42-6 33 25-12 33-49 11z"/><path d="M380 690l23-29 42-8 30 23-15 29-48 8z"/><path d="M780 685l25-32 42-5 31 25-16 31-50 7z"/></g>
+<g fill="none" stroke="#d9bd7a" stroke-width="13" stroke-linecap="round"><path d="M365 222q42 70 105 103"/><path d="M782 223q48 66 96 105"/><path d="M390 578q42-15 103-25"/><path d="M765 551q57-14 106 10"/></g>
+<g fill="#f8e6ae" opacity=".8"><circle cx="425" cy="300" r="5"/><circle cx="810" cy="288" r="4"/><circle cx="430" cy="650" r="4"/><circle cx="824" cy="650" r="5"/></g>
+</svg>
