@@ -222,9 +222,15 @@ function renderSubjectUnits(){
  const box=$('subjectUnits');if(!box)return;
  box.innerHTML=subjects.map(subject=>{
   const groups=new Map();
-  subject.questions.forEach(q=>{const lesson=q.lesson||'綜合練習';if(!groups.has(lesson))groups.set(lesson,{count:0,topics:new Set()});const g=groups.get(lesson);g.count++;if(q.topic)g.topics.add(q.topic);});
-  const buttons=[...groups.entries()].map(([lesson,g])=>`<button class="unitBtn" onclick="startUnitPractice('${subject.id}','${lesson}')"><strong>${lesson==='綜合練習'?'📚 綜合練習':lesson}</strong><small>${g.count} 題 · ${[...g.topics].slice(0,2).join('、')||subject.name+'基礎題'}</small></button>`).join('');
-  return `<div style="margin:14px 0"><b>${subject.emoji} ${subject.name}</b><div class="unitGrid" style="margin-top:8px">${buttons}</div></div>`;
+  subject.questions.forEach(q=>{
+   const lesson=q.lesson||'示範練習';
+   if(!groups.has(lesson))groups.set(lesson,{count:0,topics:new Set()});
+   const g=groups.get(lesson);g.count++;if(q.topic)g.topics.add(q.topic);
+  });
+  const buttons=[...groups.entries()].map(([lesson,g])=>`<button class="unitBtn" onclick="startUnitPractice('${subject.id}','${lesson}')"><strong>${lesson==='示範練習'?'📚 示範練習':lesson}</strong><small>${g.count} 題 · ${[...g.topics].slice(0,2).join('、')||subject.name+'練習'}</small></button>`).join('');
+  const isDemoOnly=!subject.bankLabel;
+  const note=isDemoOnly?'課本範圍尚待確認，目前只有示範題，暫不列入正式考前範圍。':`題庫來源：${subject.bankLabel}。示範題會另外標示。`;
+  return `<div style="margin:14px 0"><b>${subject.emoji} ${subject.name}</b><small class="muted" style="display:block;margin-top:4px">${note}</small><div class="unitGrid" style="margin-top:8px">${buttons}</div></div>`;
  }).join('');
 }
 function startUnitPractice(subjectId,lesson){
