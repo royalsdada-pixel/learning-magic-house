@@ -1,0 +1,72 @@
+{
+  "grade": 3,
+  "status": "curriculum_scope_partially_confirmed",
+  "publisher": {
+    "chinese": "南一",
+    "english": "翰林 Here We Go 1",
+    "taiwanese": "真平",
+    "math": "翰林",
+    "health_pe": "翰林",
+    "social": "康軒",
+    "arts": "翰林",
+    "science": "南一"
+  },
+  "subjects": {
+    "chinese": {
+      "status": "scope_titles_received_content_not_textbook_verified",
+      "lessons": [
+        "你好，新朋友",
+        "我們的約定",
+        "下課十分鐘",
+        "一顆黑點／留住今天的太陽",
+        "火大了",
+        "我該怎麼辦",
+        "最年輕的奶奶",
+        "魔〈髮〉哥哥",
+        "穿白袍的醫生伯伯"
+      ],
+      "note": "目前僅收到課名，未取得課文與生字語詞頁；題目只做一般語文能力練習，不冒充課文細節。"
+    },
+    "math": {
+      "status": "scope_received_original_practice_included",
+      "units": [
+        "10000以內的數與加減",
+        "形狀與幾何",
+        "乘除法運算",
+        "量與實測",
+        "列表與規律"
+      ]
+    },
+    "science": {
+      "status": "scope_received_original_practice_included",
+      "units": [
+        "認識植物",
+        "空氣和水",
+        "認識動物",
+        "磁鐵"
+      ],
+      "note": "依使用者提供的小節範圍設計原創練習，仍建議對照課本確認用語與教學進度。"
+    },
+    "english": {
+      "status": "publisher_confirmed_scope_pending",
+      "note": "翰林 Here We Go 1；待提供課本單元目錄與目前進度。"
+    },
+    "taiwanese": {
+      "status": "publisher_confirmed_scope_pending",
+      "note": "真平；待提供課本單元目錄與目前進度。"
+    },
+    "health_pe": {
+      "status": "publisher_confirmed_scope_pending",
+      "note": "翰林；待提供課本單元目錄與目前進度。"
+    },
+    "social": {
+      "status": "publisher_confirmed_scope_pending",
+      "note": "康軒；待提供課本單元目錄與目前進度。"
+    },
+    "arts": {
+      "status": "publisher_confirmed_scope_pending",
+      "note": "翰林；待提供課本單元目錄與目前進度。"
+    }
+  },
+  "question_policy": "All questions are original practice questions, not publisher-provided questions. Do not include in formal exam scope until checked against textbook and class progress."
+}
