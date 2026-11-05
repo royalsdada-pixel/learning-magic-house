@@ -241,11 +241,13 @@ function renderMathAnalytics(){
    rows.push({subject,lesson,count,stat,wrong,pct,status});
   });
  });
+ if (!rows.length) { box.innerHTML='<p class="muted">題庫載入中，完成後會顯示各單元學習分析。</p>'; return; }
  const attempted=rows.filter(r=>r.stat.answered>0);
  const total=attempted.reduce((n,r)=>n+r.stat.answered,0);
  const correct=attempted.reduce((n,r)=>n+r.stat.correct,0);
  const overall=total?Math.round(correct/total*100):0;
  const recommendation=attempted.length?[...attempted].sort((a,b)=>(a.pct-b.pct)||(b.wrong-a.wrong))[0]:rows.find(r=>r.subject.id==='math')||rows[0];
+ if (!recommendation) { box.innerHTML='<p class="muted">目前尚無可分析的單元題目。</p>'; return; }
  const advice=!total?'開始任一科的專項練習後，這裡就會建立學習紀錄。':recommendation.stat.answered<5?'這個項目的作答樣本還少，建議再練幾題後觀察。':recommendation.pct<80?'建議優先練習這個項目，再比較後續答對率。':'目前已練項目表現穩定，可以進行跨單元綜合挑戰。';
  box.innerHTML=`<div class="grid2" style="margin-bottom:14px"><div class="card"><div class="muted">各科累積作答</div><h2>${total} 題</h2></div><div class="card"><div class="muted">整體答對率</div><h2>${overall}%</h2></div></div>
  <div class="task" style="margin-bottom:14px"><div class="taskIcon">🧭</div><div class="taskText"><b>建議下一步：${recommendation.subject.name} · ${recommendation.lesson}</b><small>${advice}</small></div><button class="secondary" onclick="startUnitPractice('${recommendation.subject.id}','${recommendation.lesson}')">去練習</button></div>
