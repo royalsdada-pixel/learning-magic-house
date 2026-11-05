@@ -25,7 +25,8 @@
         "魔〈髮〉哥哥",
         "穿白袍的醫生伯伯"
       ],
-      "note": "目前僅收到課名，未取得課文與生字語詞頁；題目只做一般語文能力練習，不冒充課文細節。"
+      "note": "目前僅收到課名，未取得課文與生字語詞頁；題目只做一般語文能力練習，不冒充課文細節。",
+      "question_count": 18
     },
     "math": {
       "status": "scope_received_original_practice_included",
@@ -35,7 +36,8 @@
         "乘除法運算",
         "量與實測",
         "列表與規律"
-      ]
+      ],
+      "question_count": 38
     },
     "science": {
       "status": "scope_received_original_practice_included",
@@ -45,7 +47,8 @@
         "認識動物",
         "磁鐵"
       ],
-      "note": "依使用者提供的小節範圍設計原創練習，仍建議對照課本確認用語與教學進度。"
+      "note": "依使用者提供的小節範圍設計原創練習，仍建議對照課本確認用語與教學進度。",
+      "question_count": 27
     },
     "english": {
       "status": "publisher_confirmed_scope_pending",
@@ -68,5 +71,6 @@
       "note": "翰林；待提供課本單元目錄與目前進度。"
     }
   },
-  "question_policy": "All questions are original practice questions, not publisher-provided questions. Do not include in formal exam scope until checked against textbook and class progress."
+  "question_policy": "All questions are original practice questions, not publisher-provided questions. Do not include in formal exam scope until checked against textbook and class progress.",
+  "last_updated": "2026-11-05"
 }
