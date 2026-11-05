@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#17152f">
-<title>公園國小五年級・學習魔法小屋</title>
+<title>公園國小・兄妹學習魔法小屋</title>
 <style>
 :root{--bg:#111127;--panel:#201f43;--panel2:#292752;--gold:#ffd166;--mint:#76e6c4;--pink:#ff8ab3;--text:#f7f4ff;--muted:#c0bddf;--line:#484574}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#30275b 0,#17152f 52%,#101020 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC",sans-serif;min-height:100vh}
@@ -47,7 +47,7 @@ button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:12px 15px
   <div class="card"><div class="task"><div class="taskIcon">⚔️</div><div class="taskText"><b>擊敗 3 隻怪物</b><small id="dailyKills">已完成 0 / 3</small></div></div><div class="progress"><span id="dailyBar" style="width:0%"></span></div></div>
   <div class="card"><div class="task"><div class="taskIcon">📚</div><div class="taskText"><b>挑戰兩個不同學科</b><small id="dailySubjects">已探索 0 / 2 個領域</small></div></div><div class="progress"><span id="dailySubBar" style="width:0%"></span></div></div>
  </section>
- <div class="notice">📌 原型說明：目前內建的是玩法示範題，不代表任何特定出版社的正式課本內容。確認各科實際出版社與單元後，即可持續擴充正式題庫。遊戲進度會儲存在這台裝置的瀏覽器中。</div>
+ <div class="notice">📌 學習提醒：題庫中的原創練習題會依年級與已確認的課程範圍分類，仍需搭配學校實際進度使用。兄妹的遊戲進度分開儲存在這台裝置的瀏覽器中。</div>
 </main>
 
 <main id="battle" class="screen">
@@ -70,7 +70,7 @@ button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:12px 15px
 </main>
 
 <main id="progress" class="screen">
- <div class="sectionTitle"><h2>📈 冒險紀錄</h2><span class="badge">單人模式</span></div>
+ <div class="sectionTitle"><h2>📈 冒險紀錄</h2><span class="badge">個人學習紀錄</span></div>
  <div class="grid2"><div class="card"><div class="muted">累積經驗值</div><h2><span id="progressXP">0</span> XP</h2></div><div class="card"><div class="muted">累積知識點</div><h2><span id="progressCoins">0</span> 點</h2></div></div>
  <div class="sectionTitle"><h2>各領域進度</h2></div><div class="card" id="progressSubjects"></div>
   <div class="sectionTitle"><h2>🧭 各科單元學習分析</h2><small>依作答紀錄追蹤需要加強的地方</small></div><div class="card" id="mathAnalytics"></div>
