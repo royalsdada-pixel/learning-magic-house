@@ -13,8 +13,273 @@
       "L6"
     ]
   },
-  "questions": [],
-  "status": "needs_textbook_verification",
+  "questions": [
+    {
+      "id": "C001",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "閱讀理解",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "小晴每天睡前寫下今天最感謝的一件事。幾週後，她發現自己更容易注意到生活中的小確幸。這段文字最適合用哪一句話概括？",
+      "options": [
+        "記錄感謝能幫助人留意生活中的美好",
+        "每天寫字就能讓所有問題消失",
+        "只有收到禮物才值得感謝",
+        "幸福一定要花很多錢才能得到"
+      ],
+      "answer_index": 0,
+      "explanation": "摘要要抓住全文主要意思：透過記錄感謝，留意生活中的美好。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    },
+    {
+      "id": "C002",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "詞語運用",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "「他把一路上的風景與心情記錄下來，成為珍貴的回憶。」句中的「珍貴」最接近哪個意思？",
+      "options": [
+        "昂貴到不能使用",
+        "值得珍惜、有價值",
+        "數量非常多",
+        "外表十分華麗"
+      ],
+      "answer_index": 1,
+      "explanation": "珍貴也可指具有重要價值、值得珍惜。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    },
+    {
+      "id": "C003",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "成語理解",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "小哲答應同學一起完成報告，即使遇到困難，仍按時做好自己負責的部分。最適合形容他的成語是？",
+      "options": [
+        "半途而廢",
+        "言而無信",
+        "信守承諾",
+        "自相矛盾"
+      ],
+      "answer_index": 2,
+      "explanation": "答應的事努力做到，符合信守承諾。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    },
+    {
+      "id": "C004",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "句意推論",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "「做事若只求快，忽略檢查，常常得花更多時間補救。」這句話主要提醒我們？",
+      "options": [
+        "速度永遠比品質重要",
+        "完成後不必檢查",
+        "先求快就一定成功",
+        "做事要兼顧效率與仔細"
+      ],
+      "answer_index": 3,
+      "explanation": "匆忙造成錯誤與補救，提醒做事要兼顧效率和品質。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    },
+    {
+      "id": "C005",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L3",
+      "topic": "觀點判讀",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "故事中的角色發現自己誤會朋友，後來主動道歉並重新了解事情經過。這個情節最可能要傳達什麼？",
+      "options": [
+        "發現錯誤後願意修正，才能減少誤會",
+        "只要堅持原本想法就不會犯錯",
+        "道歉代表一定是自己最差",
+        "朋友之間不需要溝通"
+      ],
+      "answer_index": 0,
+      "explanation": "主動釐清與修正錯誤，是避免誤會擴大的重要做法。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    },
+    {
+      "id": "C006",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L3",
+      "topic": "閱讀態度",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "「孔雀錯了」若作為文章標題，讀者最適合採取哪一種閱讀態度？",
+      "options": [
+        "看到標題就認定孔雀很壞",
+        "先閱讀內容，找出牠的想法與行為，再判斷",
+        "只查孔雀的外型",
+        "不必理會故事中的原因"
+      ],
+      "answer_index": 1,
+      "explanation": "標題提供閱讀線索，但仍須依文章內容與證據判斷。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    },
+    {
+      "id": "C007",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L4",
+      "topic": "段落主旨",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "一段文章先寫海面顏色隨天光改變，再描寫潮間帶生物與海岸聲音。這段最可能採用哪種寫法？",
+      "options": [
+        "只列出人物對話",
+        "說明數學計算步驟",
+        "從不同感官描寫海岸景象",
+        "比較兩種交通工具"
+      ],
+      "answer_index": 2,
+      "explanation": "顏色、聲音與生物等細節，呈現多面向的景物描寫。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    },
+    {
+      "id": "C008",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L4",
+      "topic": "感官摹寫",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "「浪花拍岸，發出啪、啪的聲音。」這句主要運用了哪一種感官摹寫？",
+      "options": [
+        "視覺",
+        "嗅覺",
+        "味覺",
+        "聽覺"
+      ],
+      "answer_index": 3,
+      "explanation": "「發出聲音」是透過耳朵感受，屬於聽覺摹寫。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    },
+    {
+      "id": "C009",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L5",
+      "topic": "資訊整理",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "閱讀介紹東部旅行的文章時，若要規劃一日行程，哪一組資訊最有幫助？",
+      "options": [
+        "景點位置、交通方式與開放時間",
+        "作者最喜歡的顏色",
+        "文章用了幾個驚嘆號",
+        "每個景點名稱的字數"
+      ],
+      "answer_index": 0,
+      "explanation": "規劃行程需要位置、交通與時間等可執行資訊。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    },
+    {
+      "id": "C010",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L5",
+      "topic": "語句連貫",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "下列哪個連接詞最適合填入：「山路雖然蜿蜒，＿＿沿途景色十分迷人。」",
+      "options": [
+        "因此",
+        "但是",
+        "而且",
+        "例如"
+      ],
+      "answer_index": 1,
+      "explanation": "前後句有轉折關係，使用「但是」最恰當。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    },
+    {
+      "id": "C011",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L6",
+      "topic": "因果推論",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "夜間道路上有螃蟹移動，志工設置提醒標誌並引導車輛減速。這些作法最主要的目的為何？",
+      "options": [
+        "讓車輛完全不能通行",
+        "增加道路上的裝飾",
+        "降低人車與螃蟹發生意外的機會",
+        "讓螃蟹改變生活習慣"
+      ],
+      "answer_index": 2,
+      "explanation": "提醒、減速與引導是為了降低道路事故，兼顧人與動物安全。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    },
+    {
+      "id": "C012",
+      "subject": "國語",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L6",
+      "topic": "多層次理解",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "文章描述人們協助小動物安全通過道路。除了保護動物，這件事也能培養哪一種態度？",
+      "options": [
+        "只重視自己的方便",
+        "遇到問題就責怪別人",
+        "認為自然環境與人無關",
+        "尊重生命並思考人類活動對環境的影響"
+      ],
+      "answer_index": 3,
+      "explanation": "保護動物也提醒人們思考自身行動對其他生命與環境的影響。",
+      "source_type": "original_practice",
+      "review_status": "ai_content_checked_needs_textbook_verification"
+    }
+  ],
+  "status": "original_practice_expanded_needs_textbook_verification",
   "lesson_titles": [
     {
       "lesson": "L1",
@@ -41,5 +306,5 @@
       "title": "護送螃蟹過馬路"
     }
   ],
-  "note": "使用者已確認出版社與課名；因尚未取得課文正文或語詞表，暫不臆造課文細節題。"
+  "note": "使用者已確認出版社與課名；因尚未取得課文正文或語詞表，暫不臆造課文細節題。 本批新增12題為依課名設計的語文能力與閱讀練習，並非課文細節題；仍待對照課本習作校對。"
 }
