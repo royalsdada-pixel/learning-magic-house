@@ -229,6 +229,184 @@
       "explanation": "水是植物生長所需的重要條件，缺水可能使植物萎凋。",
       "source_type": "original_practice",
       "review_status": "draft"
+    },
+    {
+      "id": "S011",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "實驗設計",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "小安想知道手電筒與紙板距離是否會影響影子的大小。要讓實驗公平，哪一種做法最好？",
+      "options": [
+        "每次都同時更換手電筒、紙板和屏幕",
+        "固定光源與屏幕，只改變紙板和光源的距離",
+        "每次使用不同大小的紙板",
+        "不記錄影子大小"
+      ],
+      "answer_index": 1,
+      "explanation": "公平比較時應控制其他條件，只改變要研究的因素並記錄結果。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "S012",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "光線與影子",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "手電筒照向不透明紙板，紙板後方的屏幕出現影子。若把紙板移到更靠近手電筒的位置，在常見點光源模型中，影子通常會如何？",
+      "options": [
+        "影子可能變大",
+        "影子一定消失",
+        "影子一定變成透明",
+        "屏幕會自行發光"
+      ],
+      "answer_index": 0,
+      "explanation": "物體靠近點光源時，投影通常會放大；實際大小仍與光源、物體和屏幕位置有關。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "S013",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "光的反射",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "走廊轉角處看不到另一側的人，若設置凸面鏡，最主要的作用是什麼？",
+      "options": [
+        "讓光線停止前進",
+        "使走廊變暗",
+        "反射來自較大範圍的光線，增加可觀察範圍",
+        "讓物體自行發光"
+      ],
+      "answer_index": 2,
+      "explanation": "凸面鏡能把較大範圍的光反射進眼睛，增加視野。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "S014",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L1",
+      "topic": "光的傳播",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "用三張有小孔的紙板排成一直線，眼睛能透過小孔看到遠處光源。若把中間紙板稍微移開，最可能發生什麼事？",
+      "options": [
+        "光源變得更亮",
+        "光線改成螺旋前進",
+        "紙板變透明",
+        "視線被遮住，較難看到光源"
+      ],
+      "answer_index": 3,
+      "explanation": "光在均勻空氣中沿直線前進，小孔未對齊時光路會被紙板擋住。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "S015",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "植物構造與功能",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "一株植物的根部受損，最可能先影響哪一項功能？",
+      "options": [
+        "從土壤吸收水分與礦物質",
+        "花朵的顏色立刻改變",
+        "葉片停止接收陽光",
+        "種子立刻發芽"
+      ],
+      "answer_index": 0,
+      "explanation": "根的重要功能包括固定植物及吸收水分、礦物質。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "S016",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "植物運輸",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "把白色花枝插入紅色水中，過一段時間花瓣出現紅色痕跡。這個現象最能支持哪一項推論？",
+      "options": [
+        "植物只靠花瓣吸水",
+        "水分能經由植物的運輸構造移動",
+        "植物不需要莖",
+        "顏色是花朵自己製造的"
+      ],
+      "answer_index": 1,
+      "explanation": "染色水沿植物體內的運輸構造移動，顯示水分能在植物體內運輸。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "S017",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "植物生長條件",
+      "difficulty": "應用",
+      "type": "single_choice",
+      "question": "兩盆相同植物放在相同環境，一盆定期澆水，另一盆長期不澆水。若要比較水分對生長的影響，還應注意什麼？",
+      "options": [
+        "兩盆使用不同土壤和不同花盆",
+        "一盆放室內、一盆放室外",
+        "讓兩盆接受相近光照、土壤和溫度",
+        "每天只觀察其中一盆"
+      ],
+      "answer_index": 2,
+      "explanation": "比較單一因素時，其他條件盡量相同，才能較合理判斷水分的影響。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
+    },
+    {
+      "id": "S018",
+      "subject": "自然",
+      "publisher": "南一",
+      "grade": 5,
+      "term": "上學期",
+      "lesson": "L2",
+      "topic": "植物器官整合",
+      "difficulty": "中上",
+      "type": "single_choice",
+      "question": "植物的根、莖、葉各有不同功能。下列哪一個配對最合理？",
+      "options": [
+        "根製造陽光、莖開花、葉吸收土壤",
+        "根負責開花、莖固定種子、葉吸收礦物",
+        "根製造果實、莖吸收光線、葉固定植物",
+        "根吸收水分、莖支撐並運輸、葉進行光合作用"
+      ],
+      "answer_index": 3,
+      "explanation": "根吸收水分和礦物質，莖支撐並運輸，葉是光合作用的重要部位。",
+      "source_type": "original_practice",
+      "review_status": "needs_textbook_verification"
     }
-  ]
+  ],
+  "status": "original_practice_expanded_needs_textbook_verification",
+  "note": "原創練習題，非出版社官方題目；新題依目前題庫所列光與植物主題擴充，須先核對南一五上實際單元內容後再作正式範圍標記。"
 }
